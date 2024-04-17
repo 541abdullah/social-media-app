@@ -67,6 +67,8 @@ userdetschema.pre('save', async function (next) {
 
 userdetschema.statics.login = async function (username, password) {
 
+    
+
     const result = await this.findOne({ username });
     if (result != null) {
         const ispass = await bcrypt.compare(password, result.password);

@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const Post = require('../models/posts.js');
-const Userdata = require('../models/userdata.js');
-const Userdetail = require('../models/userdet.js');
+const Post = require('../../models/posts.js');
+const Userdata = require('../../models/userdata.js');
+const Userdetail = require('../../models/userdet.js');
 
 router.post("/create", async (req, res) => {
 

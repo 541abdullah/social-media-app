@@ -1,12 +1,12 @@
 const bcrypt = require('bcrypt');
 const router = require('express').Router();
-let Userdetail = require('../models/userdet.js');
-let Userdata = require('../models/userdata.js');
-const Post = require('../models/posts.js');
-const Notif = require('../models/notifs.js');
-let Convo = require('../models/convos.js');
-let Texter = require('../models/text.js');
-let Lineup = require('../models/chatlineup.js');
+let Userdetail = require('../../models/userdet.js');
+let Userdata = require('../../models/userdata.js');
+const Post = require('../../models/posts.js');
+const Notif = require('../../models/notifs.js');
+let Convo = require('../../models/convos.js');
+let Texter = require('../../models/text.js');
+let Lineup = require('../../models/chatlineup.js');
 
 
 router.put("/userupdate/:id", async (req, res) => {

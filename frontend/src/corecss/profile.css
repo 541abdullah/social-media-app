@@ -695,13 +695,7 @@
 
 }
 
-.activityscroller{
 
-    height: 400px;
-    overflow-x: scroll;
-    display: flex;
-
-}
 
 .endseperatoract{
 
@@ -746,9 +740,16 @@
 
 }
 
+.activityscroller{
 
+    height: 400px;
+    overflow-x: scroll;
+    display: flex;
+    
 
-.activityscroller::-webkit-scrollbar {
+}
+
+/* .activityscroller::-webkit-scrollbar {
     height: 3px;
 }
 
@@ -758,9 +759,20 @@
 
 .activityscroller::-webkit-scrollbar-thumb {
     background-color: rgba(155, 155, 155, 0.5);
+   
     border-radius: 20px;
+
     border: transparent;
-}
+} */
+
+
+
+@supports (scrollbar-color: auto) {
+    .activityscroller {
+      scrollbar-color: aquamarine cornflowerblue;
+    }
+  }
+
 
 
 .pfpplus{

@@ -1,8 +1,8 @@
 const router = require('express').Router();
-let Userdetail = require('../models/userdet.js');
-const Post = require('../models/posts.js');
-let Notif = require('../models/notifs.js');
-const Userdata = require('../models/userdata.js');
+let Userdetail = require('../../models/userdet.js');
+const Post = require('../../models/posts.js');
+let Notif = require('../../models/notifs.js');
+const Userdata = require('../../models/userdata.js');
 
 
 router.post("/changepfp/:username", async (req, res) => {
