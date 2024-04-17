@@ -1,0 +1,172 @@
+.searchmodal{
+    position: fixed;
+    top: 24%;
+    left: 49.3%;
+    transform: 'translate(-50%,-50%)';
+    padding: 50px;
+    z-index: 100;
+    width: 303px;
+    height: 360px;
+    overflow-y: scroll;
+    background-color: rgb(246, 242, 207);
+    border-radius: 10px;
+    
+}
+
+.searchmodalnight{
+
+    background-color: rgb(6, 27, 77);
+        
+}
+
+.blurreonee{
+    position: absolute;
+    top:61px;
+    left:287px;
+    height: 537px;
+    width: 349px;
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+.blurretwoe{
+    position: absolute;
+    top:61px;
+    left:939px;
+    height: 538px;
+    width: 349px;
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+.blurrethreee{
+    position: absolute;
+    top:61px;
+    left:636px;
+    height: 30px;
+    width: 303px;
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+
+
+.blurrefoure{
+    position: absolute;
+    top:504px;
+    left:636px;
+    height: 95px;
+    width: 303px;
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+
+
+
+.listpfpee{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top:-25.5px;
+    left: -34px;
+    border: 2px solid grey;
+}
+
+.listusernameshortee{
+    font-size: 20px;
+    position: absolute;
+    left: 33px;
+    top:-20px
+
+}
+
+.listusernamelongee{
+    font-size: 20px;
+    position: absolute;
+    left: 12px;
+    top:-25px;
+    transform:scale(0.8);
+}
+
+.listfnameshortee{
+
+    font-size: 16px;
+    position: absolute;
+    left: 33px;
+    top:5px;
+
+}
+
+.listfnamelongee{
+
+    font-size: 15px;
+    position: absolute;
+    left: 33px;
+    top:5px;
+    
+
+}
+
+
+.listdive{
+    display:flex;
+    position: relative;
+    transform: scale(0.9);
+    background-color: red;
+}
+
+
+.noresults{
+
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    left: 57px;
+
+}
+
+.nosearchemoji{
+
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 99px;
+    left: 90px;
+
+}
+
+
+
+.searchlistitem{
+
+    padding: 30px;
+    margin-bottom: 46px;
+    margin-top: -43px;
+    margin-left: -46px;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.37); 
+    box-shadow: -5px 7px 13px -3px rgba(0,0,0,0.9);
+    border-radius: 10px;
+    width: 294px;
+    height: 70px;
+    background-color: white;
+    
+
+}
+
+
+.searchlistitemnight{
+
+
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(255,255,255,0.37); 
+    box-shadow: -2px 0px 13px -3px rgba(16, 15, 15, 0.8);
+    background-color: black;
+    
+
+}
+
+.nighttextsearch{
+    color:rgb(198, 196, 196);
+}

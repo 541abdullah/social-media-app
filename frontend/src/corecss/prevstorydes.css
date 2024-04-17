@@ -1,0 +1,1031 @@
+.totalpage{
+    height: calc(100vh - 70px);
+    width: 1290px;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.instastoryicon{
+    height: 40px;
+    width: 125px;
+    margin-left: 13px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.storyheader{
+    height: 70px;
+    width: 1290px;
+    background-color: black;
+    color:antiquewhite;
+}
+
+.outfromstories{
+    height: 50px;
+    width: 50px;
+    margin-left: 1229px;
+    margin-top: -8px;
+    position: absolute;
+
+}
+
+.leftstorymover{
+    flex:0.5;
+}
+
+
+.rightstorymover{
+    flex:0.5;
+}
+
+
+.prevstory{
+    flex:2.5;
+    position: relative;
+}
+
+.nextstory{
+    flex:2.5;
+    position: relative;
+}
+
+.currentstory{
+    flex:4;
+    position: relative;
+}
+
+
+.leftcard{
+
+    background-color: rgba(0, 0, 0);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.leftcardanim{
+
+    background-color: rgba(0, 0, 0);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:48.8%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: leftcardmotion 0.3s backwards ease-in;
+
+}
+
+
+
+
+.leftcover{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+.leftcoveranim{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+    animation: leftcardanim backwards 0.3s ease-in;
+
+}
+
+.leftcardimg{
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.leftcardpfp{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: rgb(255, 255, 255) 2px solid;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.rightcard{
+
+    background-color: rgba(35, 34, 34, 0.8);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.rightcardanim{
+
+    background-color: rgba(35, 34, 34, 0.8);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:48.8%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: rightcardmotion 0.3s backwards ease-in;
+
+}
+
+.rightcover{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+.rightcoveranim{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+    animation: rightcardanim backwards 0.3s ease-in;
+
+}
+
+.rightcardimg{
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.rightcardpfp{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: red 2px solid;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.cardusername{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,160%);
+}
+
+.cardtimeago{
+
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,300%);
+
+}
+
+
+.midcard{
+ 
+    background-color: black;
+    border-radius: 20px;
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.midcardanimnext{
+ 
+    background-color: black;
+    border-radius: 20px;
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation-name: midcardmotionright;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+
+
+}
+
+
+.midcardanimprev{
+ 
+    background-color: black;
+    border-radius: 20px;
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation-name: midcardmotionleft;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+
+
+}
+
+
+.storybar{
+    position: absolute;
+    background-color: black;
+    width:314px;
+    height:5px;
+    display:flex;
+    top:-180px;
+    left:483px;
+    border-radius: 20px;
+
+}
+
+.baranim{
+    visibility: hidden;
+}
+
+
+
+.innermeteranim{
+    visibility: hidden;
+}
+
+.meteranim{
+    visibility: hidden;
+}
+
+
+.eachmeterdef{
+    flex-grow: 1;
+    height:5px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-left: 0.5px;
+    margin-right: 0.5px;
+    cursor: pointer;
+}
+
+
+
+.defdone{
+
+    height: 100%;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+
+.defremain{
+
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.eachplay{
+
+    border-radius: 20px;
+    height: 100%;
+    animation: whitemeter 5s ease-in 1 forwards;
+
+}
+
+.eachpause{
+
+    border-radius: 20px;
+    height: 100%;
+    animation: whitemeter 5s ease-in 1 forwards;
+    animation-play-state: paused;
+
+}
+
+
+#next{
+    position: absolute;
+    height: 56px;
+    width:56px;
+    top:235px;
+    left:842px;
+
+}
+
+#previous{
+
+    height:56px;
+    width:56px;
+    margin-left: -1294px;
+    margin-top: -18px;
+
+}
+
+.chevronright{
+    height:100%;
+    width:100%;
+    fill:wheat;
+
+}
+
+
+.chevronleft{
+    height:56px;
+    width:56px;
+    fill:wheat;
+}
+
+
+#next:active > #previous > .storybar > .eachmeter > .cur{
+  animation:none;
+  background-color:white
+}
+
+#previous{
+    position: absolute;
+    color: rgb(0, 85, 255);
+    height: 6px;
+    width:200 px;
+    top:20px;
+    left: 70px;
+}
+
+#previous:active > .storybar > .eachmeter > .cur{
+    animation:none;
+
+}
+
+
+.each2{
+    border-radius: 20px;
+    height: 100%;
+    animation: whitemeter 5s ease-in 15s 1 forwards;
+}
+
+@keyframes whitemeter{
+
+    0%{
+        width:0%;
+        background-color: white;
+    }
+
+    100%{
+        width: 100%;
+        background-color:white;
+    }
+
+}
+
+
+
+.storyago{
+
+    font-size: 14px;
+    font-weight: 600;
+    color:grey;
+    position: absolute;
+    top:49px;
+    left:55px;
+
+
+
+}
+
+
+.cardpfp{
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid rgb(243, 157, 19);
+    position: absolute;
+    top:20px;
+    left:4px;
+}
+
+.storyusername{
+
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+    position: absolute;
+    top:28px;
+    left:55px;
+
+}
+
+
+.storypause{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:30px;
+    left:270px;
+    color:white;
+
+}
+
+.pauseanim{
+    background-color: white;
+    visibility: hidden;
+}
+
+.storypauseclicked{
+
+    visibility: hidden;
+    
+}
+
+
+.storyplay{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:30px;
+    left:270px;
+    color:white;
+
+}
+
+.playanim{
+    visibility: hidden;
+}
+
+.storyplayclicked{
+
+    visibility: hidden;
+
+}
+
+.currentcardimg{
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+}
+
+.midcardcover{
+
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0);
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+
+.midcardcoveranim{
+
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0);
+    border-radius: 20px;
+    position: absolute;
+    animation: midcardanim 0.3s 1 backwards ease-in;
+
+}
+
+
+
+@keyframes midcardanim{
+    0%{
+        background-color: rgb(50, 49, 49,0);
+    }
+    50%{
+        background-color: rgb(50, 49, 49,0.45);
+    }
+    100%{
+        background-color: rgb(50, 49, 49,0.9);
+    }
+}
+
+
+
+
+@keyframes midcardmotionright{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        height: 300px;
+        width: 210px;
+        left: 131.3%;
+        top: 48.8%;
+        z-index: 1;
+
+    }
+}
+
+
+@keyframes midcardmotionleft{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        height: 300px;
+        width: 210px;
+        left: -31.3%;
+        top: 48.8%;
+        z-index: 1;
+
+    }
+}
+
+
+
+@keyframes leftcardanim{
+    0%{
+        background-color: rgb(50, 49, 49,0.9);
+    }
+    50%{
+        background-color: rgb(50, 49, 49,0.45);
+    }
+    100%{
+        background-color: rgb(50, 49, 49,0);
+    }
+}
+
+
+
+
+@keyframes leftcardmotion{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        width: 320px;
+        left: 180%;
+        top: 50%;
+        z-index: 1;
+        height: 450px;
+
+
+    }
+
+    
+}
+
+
+@keyframes rightcardanim{
+    0%{
+        background-color: rgb(50, 49, 49,0.9);
+    }
+    50%{
+        background-color: rgb(50, 49, 49,0.45);
+    }
+    100%{
+        background-color: rgb(50, 49, 49,0);
+    }
+}
+
+
+
+
+@keyframes rightcardmotion{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        height: 450px;
+        width: 320px;
+        left: -80%;
+        top: 50%;
+        z-index: 1;
+        
+
+
+    }
+}
+
+
+
+
+.storyviews{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:49%;
+    left:37%;
+    transform: translate(-50%,550%);
+    color: rgb(24, 107, 239);
+    font-weight: 600;
+    font-size: 13px;
+    visibility: hidden;
+
+}
+
+
+.storydeleter{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:49%;
+    left:60%;
+    transform: translate(-50%,550%);
+    color: red;
+    font-weight: 600;
+    font-size: 13px;
+    visibility: hidden;
+
+}
+
+
+.storyviews:hover{
+
+    color: rgb(92, 147, 236);
+
+}
+
+
+.storydeleter:hover{
+
+    color: rgb(246, 63, 63);
+
+}
+
+#storyliker:hover{
+
+    color: rgb(214, 75, 103);
+
+}
+
+
+
+
+
+.heartanim{
+    visibility: hidden;
+}
+
+.storyliker {
+
+
+
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,400%);
+    color: white;
+    stroke: crimson;
+    fill: white;
+    stroke-dasharray: 56.5;
+    stroke-dashoffset: 56.5;
+    cursor:pointer;
+    animation-name: heartburst, pulse;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+}
+
+
+#storylikero {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: -20px;
+    margin-bottom: 60px;
+    fill: crimson;
+    transform: rotate(60deg);
+    opacity: 0;
+    animation-name: support, pulseo;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+
+
+}
+
+#storylikert {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: -43px;
+    margin-bottom: 80px;
+    fill: crimson;
+    transform: rotate(20deg);
+    opacity: 0;
+    animation-name: support, pulset;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+}
+
+
+#storylikerth {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: -55px;
+    margin-bottom: 80px;
+    fill: crimson;
+    transform: rotate(-20deg);
+    opacity: 0;
+    animation-name: support, pulseth;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+
+}
+
+#storylikerf {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: -45px;
+    margin-bottom: 60px;
+    fill: crimson;
+    transform: rotate(-60deg);
+    opacity: 0;
+    animation-name: support, pulsef;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+
+}
+
+
+
+
+@keyframes heartburst {
+
+    0% {
+        stroke-dashoffset: 56.5;
+    }
+
+    95% {
+        margin-left: 30px;
+
+    }
+
+    95.5% {
+        margin-left: 30px;
+
+    }
+
+    96% {
+        margin-left: 27px;
+
+    }
+
+    97% {
+        margin-left: 30px;
+
+    }
+
+    98% {
+        margin-left: 33px;
+        animation-duration: 1s;
+    }
+
+    99% {
+        margin-left: 27px;
+
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: crimson;
+
+
+    }
+
+
+}
+
+@keyframes support {
+
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9, 0.9);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        fill: crimson;
+        opacity: 1
+    }
+}
+
+@keyframes pulseo {
+    0% {
+        transform: scale(1, 1) rotate(60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(60deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+
+@keyframes pulset {
+    0% {
+        transform: scale(1, 1) rotate(20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(20deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+@keyframes pulseth {
+    0% {
+        transform: scale(1, 1) rotate(-20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(-20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(-20deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+@keyframes pulsef {
+    0% {
+        transform: scale(1, 1) rotate(-60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(-60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(-60deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}

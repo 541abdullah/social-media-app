@@ -1,0 +1,171 @@
+.convo{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    cursor:pointer;
+    background-color: rgb(255, 242, 218);
+    border-bottom: solid 1px lightgray;
+    margin-top:5px;
+    height: 101px;
+}
+
+
+.convonight{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    cursor:pointer;
+    background-color: grey;
+    border-bottom: solid 1px lightgray;
+    margin-top:5px;
+    height: 101px;
+}
+
+
+.convotheyblocked{
+
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    background-color: crimson;
+    border-bottom: solid 1px lightgray;
+    margin-top:5px;
+    height: 101px;
+    position: relative;
+
+}
+
+.convoyoublocked{
+
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    background-color: crimson;
+    border-bottom: solid 1px lightgray;
+    margin-top:5px;
+    height: 101px;
+    position: relative;
+
+}
+
+.unblocker{
+    height: 20px;
+    width: 80px;
+    font-size: 10px;
+    padding: 3px;
+    left:110px;
+    top:65px;
+    background-color: rgb(255, 242, 218);
+    border-radius: 5px;
+    position: absolute;
+    color:crimson;
+}
+
+.unblocker:hover{
+    transform: scale(1.04);
+    padding:2px;
+}
+
+.convo:hover{
+    background-color: rgb(255, 242, 218);
+}
+
+.convonight:hover{
+    background-color:grey;
+}
+
+.convo:hover > .convoimg{
+    height: 83px;
+    width: 83px;
+}
+
+.convo:hover > .convoname{
+    font-size:larger;
+}
+
+
+.convonight:hover > .convoimg{
+    height: 83px;
+    width: 83px;
+}
+
+.convonight:hover > .convoname{
+    font-size:larger;
+}
+
+.convonewer{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    cursor:pointer;
+    background-color: rgb(138, 218, 129);
+    border-bottom: solid 1px lightgray;
+    margin-top:5px;
+    height: 101px;
+}
+
+.convonewer:hover{
+    background-color: rgb(138, 218, 129);
+}
+
+.convonewer:hover > .convoimg{
+    height: 83px;
+    width: 83px;
+}
+
+.convonewer:hover > .convoname{
+    font-size:larger;
+}
+
+
+
+.convoimg{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right:20px;
+    cursor:pointer;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 2px;
+}
+
+.chatpfpskeleton{
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    background-color: rgb(179, 178, 178);
+    margin-right:20px;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+
+.convoname{
+    font-weight:350;
+    font-size: large;
+    cursor:pointer;
+}
+
+.convonamenightmode{
+    color: white;
+}
+
+
+.chatfnameskeleton{
+
+    width: 110px;
+    height: 20px;
+    background-color: rgb(179, 178, 178);
+    position: relative;
+    overflow: hidden;
+}
+
+.convoname:hover {
+    font-weight: 400;
+}
+
+
+

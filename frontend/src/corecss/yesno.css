@@ -1,0 +1,178 @@
+.yesnomodal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    width: 350px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    display: flex;
+}
+
+.yesnomodalnight{
+   
+    background-color: rgb(6, 27, 77);
+}
+
+
+
+.blurremainy{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100vh;
+    width: 1290px;
+    backdrop-filter: blur(2px);
+    background-color: rgb(0,0,0,0.7); 
+    z-index: 100;
+}
+
+
+.thetext{
+    font-weight: 600;
+    position: absolute;
+    top:32px;
+    left:40px;
+    font-size: 20px;
+}
+
+.thetextlogout{
+    font-weight: 600;
+    position: absolute;
+    top:50px;
+    left:32px;
+    font-size: 18px;
+}
+
+.thetextnewconv{
+    font-weight: 600;
+    position: absolute;
+    top:30px;
+    left:20px;
+    font-size: 20px;
+
+}
+
+.thetextdel{
+    font-weight: 600;
+    position: absolute;
+    top:42px;
+    left:90px;
+    font-size: 20px;
+}
+
+.yesbut{
+
+    height: 20px;
+    width: 20px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-left: 164px;
+
+}
+
+.yesbutdiv{
+
+    height: 43px;
+    width: 350px;
+    position: absolute;
+    top: 115px;
+    border-top: 1px solid rgb(102, 102, 102);
+    border-bottom: 1px solid  rgb(102, 102, 102);
+    cursor: pointer;
+
+
+}
+
+.yesbutdiv:hover{
+
+    background-color :rgb(197, 192, 192);
+
+}
+
+
+.yesbutdivnight:hover{
+
+    background-color :rgb(108, 107, 107);
+
+}
+
+
+
+.yesbut:active{
+    transform: scale(1.1);
+}
+
+
+
+.nobutdiv{
+
+    height: 43px;
+    width: 350px;
+    position: absolute;
+    top: 158px;
+    cursor: pointer;
+    border-bottom-right-radius: 41px;
+    border-bottom-left-radius: 41px;
+
+
+}
+
+
+.nobutdiv:hover{
+
+    background-color :rgb(197, 192, 192);
+
+}
+
+.nobutdivnight:hover{
+
+    background-color :rgb(108, 107, 107);
+
+}
+
+
+
+.nobut{
+
+    height: 20px;
+    width: 20px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-left: 164px;
+
+
+}
+
+.nobut:active{
+    transform: scale(1.1);
+}
+
+
+
+.undopopupy{
+
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top:7px;
+    left: 304px;
+    cursor: pointer;
+
+}
+
+.undopopupy:active{
+    transform: scale(1.1);
+}
+
+.undopopupy:hover{
+
+    color: rgb(125, 127, 130);
+
+}
+
+.nighttextyesno{
+    color:rgb(216, 215, 215);
+}

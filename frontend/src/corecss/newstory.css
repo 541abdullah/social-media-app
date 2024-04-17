@@ -1,0 +1,1385 @@
+
+.totalpage{
+    height: calc(100vh - 70px);
+    width: 1290px;
+    background-color:black;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.instastoryicon{
+    height: 60px;
+    width: 60px;
+    margin-left: 13px;
+    margin-top: 17px;
+    position: absolute;
+}
+
+.storyheader{
+    height: 70px;
+    width: 1290px;
+    background-color: black;
+    color:antiquewhite;
+    overflow: hidden;
+}
+
+.outfromstories{
+    height: 50px;
+    width: 50px;
+    margin-left: 1229px;
+    margin-top: -8px;
+    position: absolute;
+
+}
+
+.leftstorymover{
+    flex:0.5;
+    overflow: hidden;
+}
+
+
+.rightstorymover{
+    flex:0.5;
+    overflow: hidden;
+}
+
+
+.prevstory{
+    flex:2.5;
+    position: relative;
+}
+
+.nextstory{
+    flex:2.5;
+    position: relative;
+}
+
+.currentstory{
+    flex:4;
+    position: relative;
+}
+
+
+.leftcard{
+
+    background-color: rgba(0, 0, 0);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:42%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.leftcardanim{
+
+    background-color: rgba(0, 0, 0);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:42%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: leftcardmotion 0.5s backwards ease-in;
+
+}
+
+
+
+
+.leftcover{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+.leftcoveranim{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+    animation: leftcardanim backwards 0.5s ease-in;
+
+}
+
+.leftcardimg{
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.leftcardpfpnew{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    background: linear-gradient(rgb(50, 49, 49,0.9),rgb(50, 49, 49,0.9)) padding-box,
+    linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)  border-box;
+    border: 2px solid transparent;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.leftcardpfpold{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: rgb(157, 155, 155) 2px solid;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.leftcardpfpown{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: rgb(179, 242, 195) 2px solid;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.rightcard{
+
+    background-color: rgba(35, 34, 34, 0.8);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:42%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.rightcardanim{
+
+    background-color: rgba(35, 34, 34, 0.8);
+    border-radius: 20px;
+    height: 300px;
+    width: 210px;
+    position: absolute;
+    top:42%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: rightcardmotion 0.5s backwards ease-in;
+
+}
+
+.rightcover{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+.rightcoveranim{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0.9);
+    border-radius: 20px;
+    position: absolute;
+    animation: rightcardanim backwards 0.5s ease-in;
+
+}
+
+.rightcardimg{
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.rightcardpfpnew{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    background: linear-gradient(rgb(50, 49, 49,0.9),rgb(50, 49, 49,0.9)) padding-box,
+    linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)  border-box;
+    border: 2px solid transparent;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.rightcardpfpold{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: rgb(157, 155, 155) 2px solid;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.rightcardpfpown{
+
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: rgb(179, 242, 195) 2px solid;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.cardusername{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,160%);
+}
+
+.cardtimeago{
+
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top:52%;
+    left:50%;
+    transform: translate(-50%,300%);
+
+}
+
+
+topfade {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(to top, 
+        rgba(0, 0, 0, 0), 
+        rgba(0, 0, 0, 0.5)
+    120%);
+    
+}
+
+
+
+
+.midcard{
+ 
+    background-color: black;
+    border-radius: 20px;
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    top:43%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.midcardanimnext{
+ 
+    background-color: black;
+    border-radius: 20px;
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    top:43%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation-name: midcardmotionright;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+
+
+}
+
+
+.midcardanimprev{
+ 
+    background-color: black;
+    border-radius: 20px;
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    top:43%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation-name: midcardmotionleft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+
+
+}
+
+
+.baranim{
+    visibility: hidden;
+}
+
+
+
+.innermeteranim{
+    visibility: hidden;
+}
+
+.meteranim{
+    visibility: hidden;
+    
+}
+
+
+.eachmeterdef{
+    flex-grow: 1;
+    height:5px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-left: 0.5px;
+    margin-right: 0.5px;
+    cursor: pointer;
+}
+
+
+
+.defdone{
+
+    height: 100%;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+
+.defremain{
+
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.eachplay{
+
+    border-radius: 20px;
+    height: 100%;
+    animation: whitemeter 5s ease-in 1 forwards;
+
+}
+
+.eachpause{
+
+    border-radius: 20px;
+    height: 100%;
+    animation: whitemeter 5s ease-in 1 forwards;
+    animation-play-state: paused;
+
+}
+
+
+#nextd{
+    position: absolute;
+    height: 56px;
+    width:56px;
+    top:196px;
+    left:832px;
+}
+
+#previousd{
+
+    height:56px;
+    width:56px;
+    margin-left: 8px;
+    margin-top: -34px;
+
+}
+
+.chevronright{
+    height:100%;
+    width:100%;
+    fill:wheat;
+    margin-left: -15px;
+    margin-top:-50px;
+}
+
+
+.chevronleft{
+    height:56px;
+    width:56px;
+    fill:wheat;
+}
+
+
+.each2{
+    border-radius: 20px;
+    height: 100%;
+    animation: whitemeter 5s ease-in 15s 1 forwards;
+}
+
+@keyframes whitemeter{
+
+    0%{
+        width:0%;
+        background-color: white;
+    }
+
+    100%{
+        width: 100%;
+        background-color:white;
+    }
+
+}
+
+
+
+.storyago{
+
+    font-size: 14px;
+    font-weight: 600;
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top:48px;
+    left:62px;
+    z-index: 1;
+
+
+
+}
+
+
+.cardpfp{
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid rgb(0, 0, 0);
+    position: absolute;
+    top:23px;
+    left:4px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.storyusername{
+
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+    position: absolute;
+    top:25px;
+    left:60px;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+
+.storypauseown{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:25px;
+    left:250px;
+    color:white;
+    z-index: 1;
+
+}
+
+.storypause{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:25px;
+    left:270px;
+    color:white;
+    z-index: 1;
+
+}
+
+.pauseanim{
+    background-color: white;
+    visibility: hidden;
+}
+
+.storypauseclicked{
+
+    visibility: hidden;
+    
+}
+
+
+.storyplayown{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:25px;
+    left:250px;
+    color:white;
+    z-index: 1;
+
+}
+
+
+.storyplay{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:25px;
+    left:270px;
+    color:white;
+    z-index: 1;
+
+}
+
+.playanim{
+    visibility: hidden;
+}
+
+.storyplayclicked{
+
+    visibility: hidden;
+
+}
+
+.currentcardimg{
+
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+}
+
+.midcardcover{
+
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0);
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+
+.midcardcoveranim{
+
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(50, 49, 49,0);
+    border-radius: 20px;
+    position: absolute;
+    animation: midcardanim 0.5s 1 backwards ease-in;
+
+}
+
+
+
+@keyframes midcardanim{
+    0%{
+        background-color: rgb(50, 49, 49,0);
+    }
+    50%{
+        background-color: rgb(50, 49, 49,0.45);
+    }
+    100%{
+        background-color: rgb(50, 49, 49,0.9);
+    }
+}
+
+
+
+
+@keyframes midcardmotionright{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        height: 300px;
+        width: 210px;
+        left: 131.3%;
+        top: 41.8%;
+        z-index: 1;
+
+    }
+}
+
+
+@keyframes midcardmotionleft{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        height: 300px;
+        width: 210px;
+        left: -31.3%;
+        top: 41.8%;
+        z-index: 1;
+
+    }
+}
+
+
+
+@keyframes leftcardanim{
+    0%{
+        background-color: rgb(50, 49, 49,0.9);
+    }
+    50%{
+        background-color: rgb(50, 49, 49,0.45);
+    }
+    100%{
+        background-color: rgb(50, 49, 49,0);
+    }
+}
+
+
+
+
+@keyframes leftcardmotion{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        width: 320px;
+        left: 180%;
+        top: 43%;
+        z-index: 1;
+        height: 450px;
+
+
+    }
+
+    
+}
+
+
+
+@keyframes rightcardanim{
+    0%{
+        background-color: rgb(50, 49, 49,0.9);
+    }
+    50%{
+        background-color: rgb(50, 49, 49,0.45);
+    }
+    100%{
+        background-color: rgb(50, 49, 49,0);
+    }
+}
+
+
+
+
+@keyframes rightcardmotion{
+    0%{
+        z-index: 1;
+    }
+
+    100%{
+
+        border-radius: 20px;
+        height: 450px;
+        width: 320px;
+        left: -80%;
+        top: 43%;
+        z-index: 1;
+
+
+    }
+}
+
+
+
+
+.storyoptions{
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top:25px;
+    left:280px;
+    color:white;
+    z-index: 1;
+}
+
+
+
+
+#storyliker:hover{
+
+    color: rgb(214, 75, 103);
+
+}
+
+
+
+.heartanim{
+    visibility: hidden;
+}
+
+
+
+.storyliker {
+
+
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top:85.5%;
+    left:43%;
+    color: white;
+    stroke: red;
+    fill: white;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 56.5;
+    cursor:pointer;
+
+}
+
+
+.storylikedanim{
+
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top:85.5%;
+    left:43%;
+    color: white;
+    stroke: crimson;
+    fill: white;
+    stroke-dasharray: 56.5;
+    stroke-dashoffset: 56.5;
+    cursor:pointer;
+    animation-name: heartburst, pulse;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: backwards, backwards;
+    animation-delay: 0s, 3s;
+
+}
+
+
+#storylikero {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: 181px;
+    margin-top: -90px;
+    fill: crimson;
+    transform: rotate(60deg);
+    opacity: 0;
+    animation-name: support, pulseo;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+
+
+}
+
+#storylikert {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: 160px;
+    margin-top: -30px;
+    fill: crimson;
+    transform: rotate(20deg);
+    opacity: 0;
+    animation-name: support, pulset;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+}
+
+
+#storylikerth {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: 135px;
+    margin-top: -20px;
+    fill: crimson;
+    transform: rotate(-20deg);
+    opacity: 0;
+    animation-name: support, pulseth;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+
+}
+
+#storylikerf {
+    height: 20px;
+    width: 20px;
+    color: white;
+    margin-left: 114px;
+    margin-top: -9px;
+    fill: crimson;
+    transform: rotate(-60deg);
+    opacity: 0;
+    animation-name: support, pulsef;
+    animation-iteration-count: 1, 2;
+    animation-duration: 3s, 0.8s;
+    animation-timing-function: ease-in, linear;
+    animation-direction: forwards, forwards;
+    animation-delay: 0s, 3s;
+
+}
+
+
+
+
+
+@keyframes heartburst {
+
+    0% {
+        stroke-dashoffset: 56.5;
+    }
+   
+    50% {
+       transform: translateX(0.6px);
+    }
+    62% {
+       transform: translateX(-0.6px);
+    }
+    74% {
+       transform: translateX(0.6px);
+    }
+    86% {
+       transform: translateX(-0.6px);
+    }
+    98% {
+       transform: translateX(0.6px);
+    }
+    
+    100% {
+        stroke-dashoffset: 0;
+        fill: crimson;
+
+
+    }
+
+
+}
+
+@keyframes support {
+
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.9, 0.9);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        fill: crimson;
+        opacity: 1
+    }
+}
+
+@keyframes pulseo {
+    0% {
+        transform: scale(1, 1) rotate(60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(60deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+
+@keyframes pulset {
+    0% {
+        transform: scale(1, 1) rotate(20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(20deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+@keyframes pulseth {
+    0% {
+        transform: scale(1, 1) rotate(-20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(-20deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(-20deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+@keyframes pulsef {
+    0% {
+        transform: scale(1, 1) rotate(-60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.7, 0.7) rotate(-60deg);
+        fill: crimson;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) rotate(-60deg);
+        fill: crimson;
+        opacity: 1;
+
+    }
+}
+
+
+.loadingscreenstory{
+    position:absolute;
+    top:40%;
+    left:38%;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%; 
+    border: 12px solid grey; 
+    border-right-color:rgb(62, 129, 216);
+    animation-name:loading;
+    animation-iteration-count:infinite;
+    animation-duration:0.3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards;
+}
+
+
+@keyframes loading{
+    100%{
+      transform : rotate(360deg)
+    }
+}
+
+
+
+.fallbackpostmid{
+
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    position:absolute;
+    background-color: rgb(78, 76, 76);
+    z-index: 1;
+    
+
+}
+
+.fallbacktextmid{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    color:white;
+    z-index: 1;
+    font-size: 12px;
+
+}
+
+
+.fallbackpostside{
+
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+    
+}
+
+
+.fallbacktextside{
+
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-weight: 300;
+    color:white;
+    z-index:1;
+    font-size: 18px;
+
+}
+
+
+
+
+
+.slidercancel{
+    width: 98%;
+    height: 30px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+.chevdown{
+    left: 145px;
+    top:5px;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+
+}
+
+.storyeye{
+
+    left: 250px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    stroke: rgb(0, 0, 0);
+    top:9px;
+
+}
+
+.numofviews{
+
+    left: 280px;
+    position: absolute;
+   font-size: 18px;
+   top:5px;
+
+
+}
+
+
+.pfpsliderview{
+
+    height: 44px;
+    width: 44px;
+    object-fit: fill;
+    border-radius: 50%;
+    position: absolute;
+    top:1.4px;
+    left: 1.4px;
+    
+
+}
+
+
+
+
+
+.viewslider{
+    width: 100%;
+    background-color: wheat;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: opener 0.5s ease-in forwards;
+    position: absolute;
+    top:450px;
+}
+
+
+.viewsliderthreeplus{
+    width: 100%;
+    height: 50px;
+    background-color: wheat;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: openerthreeplus 0.5s ease-in forwards;
+    position: absolute;
+    top:450px;
+}
+
+
+
+
+.viewsliderclosed{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: wheat;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: closer 0.5s ease-in forwards;
+    position: absolute;
+    top:290px;
+}
+
+.viewsliderclosedquick{
+
+    background-color: wheat;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top:290px;
+    visibility: hidden;
+}
+
+
+@keyframes closer {
+    0%{
+
+        height:160px;
+      
+    }
+    100%{
+        height: 0px;
+        top:450px;
+
+    }
+}
+
+
+
+.viewsliderclosedthreeplus{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: wheat;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: closerthreeplus 0.5s ease-in forwards;
+    position: absolute;
+    top:150px;
+}
+
+
+
+.viewhidden{
+    visibility: hidden;
+}
+
+
+@keyframes closerthreeplus {
+    0%{
+
+        height:300px;
+      
+    }
+    100%{
+        height: 0px;
+        top:450px;
+    }
+}
+
+
+
+
+@keyframes opener {
+    0%{
+        height: 0px;
+    }
+    100%{
+       height: 160px;
+       top:290px;
+    }
+}
+
+
+
+@keyframes openerthreeplus {
+    0%{
+        height: 0px;
+    }
+    100%{
+       height: 300px;
+       top:150px;
+    }
+}
+
+
+
+.eachview{
+    display: flex;
+    margin-top:1px;
+    background-color: white;
+    height: 60px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 97%;
+    transform: translateX(6px);
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.viewnamedropdown{
+
+    position: absolute;
+    font-weight: 600;
+    top: 15px;
+    left: 60px;
+
+}
+
+
+.viewpfpdropdown{
+    
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border: orange 2px solid;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+    position: absolute;
+    
+    
+}
+

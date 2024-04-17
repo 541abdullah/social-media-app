@@ -1,0 +1,413 @@
+.postmodal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    width: 870px;
+    height: 520px;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+
+.rightmover{
+    position: fixed;
+    top: 50%;
+    right: -0.35%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.rightmover:hover{
+
+    color: rgb(199, 197, 197);
+
+}
+
+.rightmover:active{
+
+    color: rgb(255, 255, 255);
+    
+}
+
+.leftmover{
+
+    position: fixed;
+    top: 50%;
+    left: 2.8%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+.leftmover:hover{
+
+    color: rgb(199, 197, 197);
+
+}
+
+.leftmover:active{
+
+    color: rgb(255, 255, 255);
+    
+}
+
+.undopopup{
+
+    position: fixed;
+    top: 5%;
+    right: -0.35%;
+    transform: translate(-50%,-50%);
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    color: rgb(249, 246, 246);
+    cursor: pointer;
+
+}
+
+.undopopup:hover{
+
+    color: rgb(199, 197, 197);
+
+}
+
+.undopopup:active{
+
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.postsection{
+    
+    flex:5.7;
+
+}
+
+.postdetssection{
+    
+    flex:4.3;
+    background-color: white;
+
+}
+
+.postdetssectionnight{
+    
+    flex:4.3;
+    background-color: black;
+
+}
+
+.bigpost{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.blurremain{ 
+
+    position: absolute;
+    top:0px; 
+    left:0px;
+    height: 100vh;
+    width: 1290px;
+    backdrop-filter: blur(2px); 
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100; 
+}
+
+
+.listusername{
+    font-size: 20px;
+    position: absolute;
+    left: 80px;
+    top:34px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.delpost{
+    height:50px;
+    width: 50px;
+    position: absolute;
+    stroke: rgb(82, 69, 71);
+    left: 335px;
+    top:23px;
+    cursor: pointer;
+}
+
+.delpost:hover{
+    transform: scale(1.1);
+    stroke: crimson;
+}
+
+
+.listdiv{
+    display:flex;
+    position: relative;
+}
+
+.listpfp{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top:18px;
+    left: -10px;
+    border: 2px solid rgb(92, 92, 92);
+    padding: 2px;
+    cursor: pointer;
+}
+
+.viewpostruler{
+    height: 1px;
+    width: 100%;
+    margin-top: 90px;
+    background-color: gray;
+
+}
+
+
+.commentsection{
+
+    height: 320px;
+    width: 100%;
+    overflow-x: scroll;
+
+}
+
+.eachcomment{
+
+    margin-top: 7px;
+    position: relative;
+}
+
+.uppercom{
+    display: flex;
+    width: 300px;
+
+}
+
+
+.compfp{
+
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    border: 2px solid rgb(92, 92, 92);
+    padding: 1px;
+    margin-left: 16px;
+    cursor: pointer;
+
+}
+
+.onlycom{
+
+    width: 90%;
+    overflow-wrap: break-word;
+    margin-left: 12px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+
+
+}
+
+.likeandtime{
+    margin-left: -73px;
+    
+}
+
+
+.comandusername{
+
+    font-size: 14px;
+    line-height: 1.3;
+    cursor: pointer;
+
+}
+
+.comliker{
+    height: 15px;
+    width: 15px;
+    stroke: black;
+    margin-top: 4px;
+    left: 344px;
+    position: absolute;
+    cursor:pointer;
+}
+
+.comlikernight{
+    stroke: white;
+}
+
+.comlikerred{
+    height: 15px;
+    width: 15px;
+    stroke:crimson;
+    fill: crimson;
+    margin-top: 4px;
+    left: 344px;
+    position: absolute;
+    cursor:pointer;
+}
+
+.comlike{
+    color:grey; 
+    font-size: 13px;
+    margin-left: 74px;
+
+}
+
+.whenposted{
+    color:grey; 
+    font-size: 13px;
+    margin-left: 10px;
+
+}
+
+
+
+.whenpostedbyuser{
+    color:grey; 
+    font-size: 13px;
+    margin-left: 72px;
+}
+
+.yourinput{
+
+    margin-top: -17px;
+    height: 119.2px;
+    position: relative;
+
+    
+}
+
+.yourinputnight{
+    background-color: black;
+}
+
+.likecounterpopup{
+
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 35px;
+    left: 17px;
+
+}
+
+.timeagopopup{
+
+    font-weight: 500;
+    font-size: 11px;
+    position: absolute;
+    top: 60px;
+    left: 18px;
+    color:grey;
+    width: 120px;
+
+}
+
+.comlikerinp{
+    height: 33px;
+    width: 33px;
+    left:13px;
+    position: absolute;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.comlikerinpnight{
+    stroke:white;
+}
+
+.comlikerinpred{
+    height: 33px;
+    width: 33px;
+    left:13px;
+    position: absolute;
+    margin-top: 1px;
+    transform: scale(1.1);
+    fill:crimson;
+    stroke: crimson;
+    cursor: pointer;
+}
+
+
+.inpruler{
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+    margin-left: 0px;
+    margin-top: -9px;
+    margin-bottom: 4px;
+
+}
+
+.inprulertwo{
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+    margin-top: 80px;
+
+}
+
+.commentadderpopup{
+    position: absolute;
+    top:90px;
+    height: 30px;
+    left: 17px;
+    width: 290px;
+    padding: 2px;
+
+}
+
+.commentadderpopupnight{
+
+    background-color: black;
+    color: white;
+
+}
+
+.commentpostbut{
+
+    position: absolute;
+    top:94px;
+    left: 322px;
+    font-weight: 600;
+    color:rgb(62, 134, 201);
+    
+
+}
+
+
+.commentpostbut:hover{
+
+    color:rgb(135, 188, 236);
+    
+
+}
+
+
+.commentpostbut:active{
+
+    transform: scale(1.1);
+    
+}
+
+.nighttextpost{
+    color:white;
+}

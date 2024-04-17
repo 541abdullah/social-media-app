@@ -1,0 +1,49 @@
+.constraintone{
+
+    position: absolute;
+    top:380px;
+    left:240px;
+    font-size: 12px;
+
+}
+
+.constrainttwo{
+
+    position: absolute;
+    top:365px;
+    left:430px;
+    width: 220px;
+    font-size: 12px;
+}
+
+.constraintthree{
+
+    position: absolute;
+    top:350px;
+    left:240px;
+    font-size: 12px;
+}
+.constraintfour{
+
+    position: absolute;
+    top:350px;
+    left:430px;
+    width: 220px;
+    font-size: 12px;
+
+}
+.constraintfive{
+
+    position: absolute;
+    top:365px;
+    left:240px;
+    font-size: 12px;
+
+}
+
+.nopass{
+
+    margin-top: -10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}

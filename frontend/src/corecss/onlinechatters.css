@@ -1,0 +1,52 @@
+.online{
+    margin-top: 100px;
+    
+}
+
+.allonline{
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.onlinepfpcont{
+    position: relative;
+    margin-right: 10px;
+}
+
+.onlinepfp{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 2px;
+}
+
+.onlinemark{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    bottom:3px;
+    right:0;
+    background-color: limegreen;
+}
+
+.startconvobutton{
+    padding:5px;
+    height: 60px;
+    width: 60px;
+    background-color: skyblue;
+    border-radius: 7px;
+}
+
+.noaccess{
+    cursor:not-allowed;
+}
+
+.onlnight{
+    color:white;
+}

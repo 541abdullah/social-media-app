@@ -1,0 +1,238 @@
+
+.mainexp{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.mainexpnight{
+    background-color: black;
+}
+
+
+.exploreleftpain{
+    flex:2;
+}
+
+
+.mainfeed{
+
+    flex:7;
+    position: relative;
+    overflow-y: scroll;
+ 
+   
+}
+
+.mainfeednoscroll{
+
+    flex:7;
+    border:2px solid grey;
+    position: relative;
+    overflow-y: hidden;
+   
+
+}
+
+
+.exploresearchbar{
+
+    height: 50px;
+    width: 251px;
+    padding: 9px;
+    margin-left: 348px;
+    margin-top: 30px;
+    z-index: 1000;
+    border: 1px grey solid;
+    font-size: 16px;
+    border-radius: 10px;
+    
+}
+
+.exploresearchbarnight{
+
+    background-color: black;
+    color:white;
+    border: 1px grey solid;
+    
+    
+}
+
+
+.searchicondiv{
+
+    border: 1px grey solid;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 601px;
+    top:30px;
+
+}
+
+.expsearchicon{
+    
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.expsearchiconnight{
+    
+    color:white;
+    
+
+}
+
+.infinityfeed {
+
+    margin-left: 50px;
+    margin-top: 40px;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+}
+
+.infinityfeednext {
+
+    margin-left: 50px;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+
+.cont {
+    height: 280px;
+    width: 300px;
+    cursor: pointer;
+}
+
+
+.contbig {
+    height: 560px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+.incont {
+    height: 280px;
+    width: 300px;
+    position: absolute;
+    top: 280px;
+    left: -600px;
+    cursor: pointer;
+}
+
+
+.inconter {
+    height: 280px;
+    width: 300px;
+    position: absolute;
+    top: 280px;
+    left: -300px;
+    cursor: pointer;
+}
+
+.inconttwo {
+    height: 280px;
+    width: 300px;
+    position: absolute;
+    top: 280px;
+    left: 600px;
+    cursor: pointer;
+}
+
+
+.incontertwo {
+    height: 280px;
+    width: 300px;
+    position: absolute;
+    top: 280px;
+    left: 300px;
+    cursor: pointer;
+}
+
+
+
+
+.expruler{
+    height: 1px;
+    background-color: grey;
+    margin-top: 45px;
+    width: 900px;
+    margin-left: 50px;
+}
+
+
+.feedcell{
+    height: 280px;
+    width: 300px;
+    object-fit: cover;
+    padding: 1.5px;
+}
+
+.feedcellbig{
+    height: 560px;
+    width: 300px;
+    object-fit: cover;
+    padding: 1.5px;
+}
+
+
+.loadingmoreblocks{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 485px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+    border: 6px solid grey; 
+    border-right-color:rgb(255, 0, 0);
+    animation-name:loading;
+    animation-iteration-count:infinite;
+    animation-duration:0.3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards;
+
+}
+
+
+.loadingmoreblocksinitial{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-left: 390px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%; 
+    border: 6px solid grey; 
+    border-right-color:rgb(255, 0, 0);
+    animation-name:loading;
+    animation-iteration-count:infinite;
+    animation-duration:0.3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards;
+
+}
+
+@keyframes loading{
+    100%{
+      transform : rotate(360deg)
+    }
+}
+
+
+.spacediv{
+    height: 40px;
+    width: 40px;
+}

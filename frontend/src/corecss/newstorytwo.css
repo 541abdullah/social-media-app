@@ -1,0 +1,55 @@
+#previousd{
+    position: absolute;
+    color: rgb(0, 85, 255);
+    height: 6px;
+    width:200 px;
+    top:235px;
+    left: -382px;
+}
+
+#nextd{
+    position: absolute;
+    height: 56px;
+    width:56px;
+    top:235px;
+    left:842px;
+}
+
+
+.storybar{
+    position: absolute;
+    background-color: rgb(0,0,0,0);
+    width:314px;
+    height:5px;
+    display:flex;
+    top:-219px;
+    right:483px;
+    border-radius: 20px;
+
+}
+
+.baranim{
+    visibility: hidden;
+}
+
+.storybard{
+    position: absolute;
+    background-color: rgb(0,0,0,0);
+    width:314px;
+    height:5px;
+    display:flex;
+    top:-185px;
+    left:475px;
+    border-radius: 20px;
+    
+}
+
+.baranimd{
+    visibility: hidden;
+}
+
+
+#nextd:active > .storybar{
+    z-index: 100;
+}
+

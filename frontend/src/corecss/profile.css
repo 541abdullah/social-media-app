@@ -1,0 +1,942 @@
+.mainprofilediv{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+
+}
+
+
+.mainprofiledivnight{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: black;
+
+}
+
+
+.leftpainprof{
+    flex:2;
+}
+
+
+.maintopdiv{
+
+    display: flex;
+    top: 47px;
+    position: absolute;
+
+}
+
+.profilemain{
+    flex:7;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.bigprofile{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid grey;
+    position: absolute;
+    left : 40px;
+    top: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.bigprofilenew{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)  border-box;
+    border: 3px solid transparent;
+    position: absolute;
+    left : 40px;
+    top: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.bigprofilenewnight{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)  border-box;
+    border: 3px solid transparent;
+    position: absolute;
+    left : 40px;
+    top: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.mainusername{
+
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 273px;
+
+}
+
+.mainusernamenight{
+
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 273px;
+    color: white;
+
+}
+
+.followplus{
+
+    margin-left: 45px;
+    margin-top: 8px;
+    position: relative;
+ 
+}
+
+.mainfollow{
+
+    width:110px;
+    height: 35px;
+    color:wheat;
+    background-color: rgb(4, 110, 222);
+    border-radius: 5px;
+    padding-right: 16px;
+}
+
+.editprof{
+
+    margin-left: 45px;
+    margin-top: 8px;
+    position: relative;
+
+}
+
+.editprofbut{
+    width:110px;
+    height: 35px;
+    color:wheat;
+    background-color: rgb(106, 118, 131);
+    border-radius: 5px;
+}
+
+
+.mainplus{
+
+    color:wheat;
+    left: 85px;
+    top:5px;
+    transform: scale(1.6);
+    cursor: pointer;
+    padding-right: 10px;
+    position: absolute;
+
+
+}
+
+.mainrequested{
+
+    background-color: rgb(148, 164, 180);
+    height: 35px;
+    width: 130px;  
+    border-radius: 5px;
+    color: white;
+    margin-left: 55px;
+    margin-top: 8px;
+}
+
+
+.followingtick{
+
+    margin-left: 60px;
+    margin-top: 8px;
+    position: relative;
+
+}
+
+
+.mainfollowing{
+    background-color: rgb(148, 164, 180);
+    height: 35px;
+    width: 135px;  
+    border-radius: 5px;
+    color: white;
+    padding-right: 20px;
+}
+
+.maincheck{
+
+    color:white;
+    left: 107px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    padding-right: 10px;
+    position: absolute;
+
+}
+
+
+.messageprofoptions{
+
+    margin-left: 15px;
+    margin-top: 8px;
+    position: relative;
+
+
+}
+
+.bluemessageprofoptions{
+
+    margin-left: 10px;
+    margin-top: 8px;
+    position: relative;
+
+
+}
+
+.mainmessage{
+
+
+    width:120px;
+    height: 35px;
+    color:wheat;
+    background-color: rgb(148, 164, 180);
+    border-radius: 5px;
+
+
+}
+
+.messagenoaccess{
+
+    width:120px;
+    height: 35px;
+    color:wheat;
+    background-color: rgb(148, 164, 180);
+    border-radius: 5px;
+    cursor: not-allowed;
+
+}
+
+
+.moreprofoptions{
+
+    color:black;
+    left: 150px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.moreprofoptionsnight{
+
+    color:white;
+    left: 150px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.moreprofoptionsown{
+
+    color:black;
+    left: 20px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.moreprofoptionsownnight{
+
+    color:white;
+    left: 20px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.moreprofoptionsnotincl{
+
+    color:black;
+    left: 20px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.moreprofoptionsnotinclnight{
+
+    color:white;
+    left: 20px;
+    top:6px;
+    transform: scale(1.5);
+    cursor: pointer;
+    position: absolute;
+
+}
+
+
+.userstats{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 258px;
+}
+
+.postsnum{
+
+    font-size: 25px;
+    margin: 14px;
+
+
+}
+
+.postsnumnight{
+
+    font-size: 25px;
+    margin: 14px;
+    color:white;
+
+
+}
+
+.followingnum{
+
+    font-size: 25px;
+    margin: 14px;
+
+
+}
+
+.followingnumnight{
+
+    font-size: 25px;
+    margin: 14px;
+    color:white;
+
+
+}
+
+.followingnumclick{
+
+    font-size: 25px;
+    margin: 14px;
+    cursor: pointer;
+
+
+}
+
+.followingnumclicknight{
+
+    font-size: 25px;
+    margin: 14px;
+    cursor: pointer;
+    color:white;
+
+
+}
+
+.followernum{
+
+    font-size: 25px;
+    margin: 14px;
+
+
+}
+
+.followernumnight{
+
+    font-size: 25px;
+    margin: 14px;
+    color:white;
+
+
+}
+
+.followernumclick{
+
+    font-size: 25px;
+    margin: 14px;
+    cursor: pointer;
+
+
+}
+
+
+.followernumclicknight{
+
+    font-size: 25px;
+    margin: 14px;
+    cursor: pointer;
+    color:white;
+
+
+}
+
+.bio{
+    background-color: cornsilk;
+    position: absolute;
+    top: 170px;
+    left: 273px;
+    height: 75px;
+    resize: none;
+    outline: none;
+}
+
+.bionight{
+    background-color: rgb(88, 74, 15);
+    position: absolute;
+    top: 170px;
+    left: 273px;
+    height: 75px;
+    resize: none;
+    outline: none;
+}
+
+
+.mutuals{
+
+    position: absolute;
+    top: 260px;
+    left: 273px;
+    color: grey;
+    font-size: 14px;
+
+
+}
+
+.midseperator{
+    position: absolute;
+    top:305px;
+    background-color: grey;
+    height: 1px;
+    width: 920px;
+    left: 50px;
+}
+
+.postgrid{
+
+    position: relative;
+    transform: scale(0.8);
+
+}
+
+
+.gridsymbol{
+  
+   display: flex;
+   position: absolute;
+   height: 30px;
+   width: 40px;
+   left: 455px;
+   top: 400px;
+   
+}
+
+
+.gridlogonight{
+    color:white;
+}
+
+.wordposts{
+    margin-left: 7px;
+}
+
+.wordpostsnight{
+    margin-left: 7px;
+    color:white;
+}
+
+
+.gridtop{
+
+    position: absolute;
+    top:380px;
+    background-color: rgb(35, 35, 35);
+    height: 1px;
+    width: 100px;
+    left: 445px;
+}
+
+
+
+
+.thegrid{
+
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 1150px;
+    left: -65px;
+    top:450px;
+    flex-wrap: wrap;
+
+}
+
+.cell{
+
+    height: 383px;
+    width: 383px;
+    cursor: pointer;
+
+}
+
+.eachpost{
+    height: 383px;
+    width: 383px;
+    object-fit: cover;
+    padding: 1px;
+}
+
+.coverimg{
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    height: 383px;
+    width: 383px;
+    visibility: hidden;
+
+}
+
+.coverlikes{
+    position: absolute;
+    display: flex;
+    top:155px;
+    left: 50px;
+    font-size: 43px;
+    color: rgb(244, 232, 211);
+
+}
+
+.covercomments{
+    position: absolute;
+    display: flex;
+    top:155px;
+    left: 230px;
+    font-size: 43px;
+    color:  rgb(244, 232, 211);
+
+}
+
+.coverheart{
+    height:70px;
+    width:70px;
+    fill:  rgb(244, 232, 211);
+}
+
+.coverbubble{
+
+    height:70px;
+    width:70px;
+    fill: rgb(244, 232, 211);
+
+}
+
+
+.cell:hover > .coverimg{
+
+    visibility: visible;
+
+}
+
+
+
+
+
+
+.endseperator{
+
+    margin-top: 100px;
+    background-color: grey;
+    height: 1px;
+    width: 1200px;
+}
+
+.proffooter{
+    position: relative;
+    height: 60px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 490px;
+}
+
+.creds{
+    position: absolute;
+    height: 5px;
+    font-weight: 500;
+    top:10px;
+}
+
+.credsnight{
+    position: absolute;
+    height: 5px;
+    font-weight: 500;
+    top:10px;
+    color:white;
+}
+
+.emptyspan{
+    height: 5px;
+    top:20px;
+}
+
+
+
+
+
+.ifnoposts{
+
+    position: relative;
+    transform: scale(0.8);
+
+}
+
+
+.nopostsyet{
+
+    position: absolute;
+    width: 1150px;
+    left: -65px;
+    top:450px;
+    height: 600px;
+    
+}
+
+.endseperatorfb{
+
+    margin-top: 500px;
+    background-color: grey;
+    height: 1px;
+    width: 1150px;
+
+} 
+
+
+.fallbacknoposts{
+    position: absolute;
+    top: 130px;
+}
+
+.failedcam{
+
+   height: 80px;
+   width: 80px;
+   position: absolute;
+   left: 522px;
+   color: gray;
+
+
+
+}
+
+
+.noaccess{
+
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    left: 506.5px;
+    top: -13px;
+    color: gray;
+ 
+}
+
+.nopoststatement{
+
+
+    width: 400px;
+    position: absolute;
+    left: 503px;
+    top: 115px;
+    color: gray;
+    font-size: 19px;
+
+}
+
+
+.pvtacc{
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    left: 506.5px;
+    top: -13px;
+    color: gray;
+}
+
+
+
+
+
+.activityblocks{
+
+    position: absolute;
+    width: 1150px;
+    left: -65px;
+    top:387px;
+    height: 600px;
+
+
+}
+
+.activityscroller{
+
+    height: 400px;
+    overflow-x: scroll;
+    display: flex;
+
+}
+
+.endseperatoract{
+
+    margin-top: 300px;
+    background-color: grey;
+    height: 1px;
+    width: 1150px;
+
+
+}
+
+
+
+.pfpact{
+
+
+    height: 350px;
+    width: 379px;
+    margin: 6px;
+    flex-shrink:0;
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.37); 
+    box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.8);
+    border-radius: 15px;
+    position: relative;
+    
+
+}
+
+
+.pfpactnight{
+
+
+    height: 350px;
+    width: 379px;
+    margin: 6px;
+    flex-shrink:0;
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(255,255,255,0.37); 
+    box-shadow: -1px 3px 12px -3px rgba(255,255,255,0.8);
+    border-radius: 15px;
+    position: relative;
+    
+
+}
+
+
+
+.activityscroller::-webkit-scrollbar {
+    height: 3px;
+}
+
+.activityscroller::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.activityscroller::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+
+.pfpplus{
+
+    height: 170px;
+    width: 170px;
+    position: absolute;
+    left: 105px;
+    top: 40px;
+
+}
+
+.night{
+    color: white;
+}
+
+.pfpdesc{
+ 
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    left: 83px;
+    top:220px;
+
+}
+
+
+.actbut{
+
+    height: 50px;
+    background-color: rgb(123, 184, 218);
+    width: 140px;
+    border-radius: 9px;
+    color: wheat;
+    font-size: 19px;
+    position: absolute;
+    top:270px;
+    left: 120px;
+
+}
+
+
+.followadd{
+
+    height: 170px;
+    width: 170px;
+    position: absolute; 
+    left: 105px;
+    top: 40px;
+
+}
+
+.followdesc{
+ 
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    left: 100px;
+    top:220px;
+
+}
+
+.pennib{
+
+    height: 130px;
+    width: 130px;
+    position: absolute; 
+    left: 150px;
+    top: 13px;
+
+
+}
+
+.artisticcircle{
+
+    height: 170px;
+    width: 170px;
+    position: absolute; 
+    left: 103px;
+    top: 40px;
+
+}
+
+
+.biodesc{
+ 
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    left: 33px;
+    top:220px;
+
+}
+
+
+
+.cameralove{
+
+    height: 40px;
+    width: 40px;
+    position: absolute; 
+    left: 122px;
+    top: 32px;
+    color:red;
+
+
+}
+
+.camerabubble{
+
+    height: 170px;
+    width: 170px;
+    position: absolute; 
+    left: 105px;
+    top: 55px;
+
+}
+
+
+
+.cpostdesc{
+ 
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    left: 76px;
+    top:220px;
+
+}
+
+
+
+.pvtstatement{
+    width: 400px;
+    position: absolute;
+    left: 490px;
+    top: 115px;
+    color: gray;
+    font-size: 19px;
+}
+
+.profilepfpskeleton{
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left : 40px;
+    top: 40px;
+    background-color: rgb(179, 178, 178);
+    overflow:hidden;
+
+}
+
+.profileusernameskeleton{
+
+    height: 30px;
+    width: 140px;
+    margin-left: 275px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(179, 178, 178);
+
+}
+
+.profilefbuttonskeleton{
+
+    height: 30px;
+    width: 100px;
+    margin-left: 32px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(179, 178, 178);
+
+
+
+}

@@ -1,0 +1,1539 @@
+
+.plusc{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    fill:crimson;
+    stroke: white;
+    left:74px;
+    top:74px;
+    cursor:pointer;
+    z-index: 10;
+}
+
+
+#qwertynew{
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50%;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)  border-box;
+    border: 3px solid transparent;
+}
+
+#qwertynewnight{
+
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50%;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)  border-box;
+    border: 3px solid transparent;
+
+}
+
+
+#qwertyold{
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50%;
+    height: 100px;
+    width: 100px;
+    border: 3px solid rgb(157, 155, 155);
+}
+
+#qwertyown{
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50%;
+    height: 100px;
+    width: 100px;
+    border: 3px solid rgb(179, 242, 195);
+}
+
+
+.storylanepfp{
+    border-radius: 50%;
+    object-fit: fill;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    margin-left: -1.6px;
+    margin-top: -1px;
+}
+
+#storyscroll{
+    transform: scale(0.8);
+    border-radius: 5px;
+    margin-left: -60px;
+    width: 800px;
+    margin-bottom: 30px;
+    
+}
+
+
+
+.hpagecontainer{
+    display:flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    
+}
+
+.hpagecontainernight{
+    display:flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: black;
+    
+}
+
+
+
+.leftpain{
+    flex:2;
+}
+
+.topdown{
+    flex:4.8;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+.sidepane{
+    flex:2.2;
+}
+
+
+
+
+.sugge{
+    font-weight: 500;
+    margin-left: 20px;
+    top:15px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+
+.suggenight{
+    font-weight: 500;
+    margin-left: 20px;
+    top:15px;
+    padding-bottom: 30px;
+    position: relative;
+    color:white;
+}
+
+
+
+.userlistitem{
+    padding: 30px;
+    margin: 15px;
+
+}
+
+
+
+
+.blue_follow_button{
+    background-color: rgb(4, 110, 222);
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    position: absolute;
+    right: -30px;
+    top:-16px;
+    color: wheat;
+    padding-right: 7px;
+}
+
+
+
+.blue_follow_buttonhidden{
+    background-color: rgb(4, 110, 222);
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    position: absolute;
+    right: -30px;
+    top:-16px;
+    color: wheat;
+    padding-right: 7px;
+    visibility: hidden;
+}
+
+.justplus{
+
+    color: wheat;
+    position: absolute;
+    right: -30px;
+    top:-12.5px;
+    transform: scale(0.8);
+    cursor: pointer;
+
+}
+
+.justplushidden{
+
+    color: wheat;
+    position: absolute;
+    right: -30px;
+    top:-12.5px;
+    transform: scale(0.8);
+    visibility: hidden;
+
+}
+
+.silver_requested_button{
+    background-color: rgb(148, 164, 180);
+    height: 30px;
+    width: 100px;  
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    right: -33px;
+    top:-16px;
+}
+
+.silver_requested_buttonhidden{
+    background-color: rgb(148, 164, 180);
+    height: 30px;
+    width: 100px;  
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    right: -33px;
+    top:-16px;
+    visibility: hidden;
+}
+
+
+
+.listpfpsidepain{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -45px;
+    border: 2px solid black;
+
+
+}
+
+.listpfpsp{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top:-34px;
+    left: -45px;
+    border: 2px solid rgb(92, 92, 92);
+    padding: 2px;
+    cursor:pointer;
+}
+
+.listdiv{
+    display:flex;
+    position: relative;
+    transform: scale(0.9);
+}
+
+
+.listusernameshorte{
+    font-size: 20px;
+    position: absolute;
+    left: 25px;
+    top:-25px;
+    cursor:pointer;
+
+}
+
+.listusernameshortenight{
+    font-size: 20px;
+    position: absolute;
+    left: 25px;
+    top:-25px;
+    cursor:pointer;
+    color:white;
+}
+
+.listusernamelonge{
+
+    font-size: 20px;
+    position: absolute;
+    left: 12px;
+    top:-25px;
+    transform:scale(0.8);
+    cursor:pointer;
+}
+
+.listfnameshorte{
+
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+    cursor:pointer;
+
+}
+
+.listfnameshortenight{
+
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+    cursor:pointer;
+    color:white;
+
+}
+
+.listfnamelonge{
+
+    font-size: 12px;
+    position: absolute;
+    left: 28px;
+    transform: scale(0.4);
+    cursor:pointer;
+    
+
+}
+
+.activitypair{
+   
+    cursor:pointer;
+    padding: 23px;
+    margin: -12px;
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.37); 
+    box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.activitypairnight{
+
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(255,255,255,0.37);
+    box-shadow: 0px 3px 5px -2px rgba(255,255,255,0.8);
+
+}
+
+
+.activitypair:hover{
+
+    background-color: rgb(216, 216, 216);
+   
+    
+}
+
+
+.activitypairnight:hover{
+
+    background-color: rgb(52, 52, 52);
+   
+    
+}
+
+
+.activitypair:hover .activityicons{
+
+    transform: scale(1.1);
+   
+    
+}
+
+
+.activitypair:hover .activityiconslg{
+
+    transform: scale(1.1);
+   
+    
+}
+
+
+.activityicons{
+    cursor: pointer;
+}
+
+.activityiconslg{
+    cursor: pointer;
+    margin-left:3px;
+}
+
+.activityname{
+    cursor:pointer;
+    position: absolute;
+    top:28px;
+    left: 74px;
+}
+
+.selectedcurrently .activitypair .activityicons{
+    color: rgb(51, 154, 245);
+}
+
+.selectedcurrently .activitypair .activityiconslg{
+    color: rgb(51, 154, 245);
+}
+
+
+
+.selectedcurrently .activitypair .activityname{
+    color: rgb(51, 154, 245);
+    font-weight: 700;
+}
+
+
+.leftpainitem{
+    margin:20px;
+    position: relative;
+}
+
+
+.followusers{
+    margin-top: 30px;
+}
+
+
+
+.counternotifs{
+
+    position:absolute;
+    right: 203px;
+    top: 13px;
+    color: wheat;
+    font-weight: 600;
+    z-index: 1;
+}
+
+
+
+.counternotifsresize{
+
+    position:absolute;
+    right: 203px;
+    top: 13px;
+    color: wheat;
+    font-weight: 600;
+    z-index: 1;
+
+
+}
+
+.counternotifsdouble{
+
+
+    position:absolute;
+    right: 200px;
+    top: 13px;
+    color: wheat;
+    font-weight: 600;
+    z-index: 1;
+    
+}
+
+
+.counternotifsdoubleresize{
+
+    position:absolute;
+    right: 200px;
+    top: 13px;
+    color: wheat;
+    font-weight: 600;
+    z-index: 1;
+    
+}
+
+
+.notifs{
+    cursor:pointer;
+    transform: translateX(-7px) translateY(-6px);
+    
+}
+
+
+
+.fornotifs{
+ 
+    position:absolute;
+    right: 195px;
+    top: 14px;
+
+}
+
+.fornotifsresize{
+ 
+    position:absolute;
+    right: 195px;
+    top: 14px;
+
+}
+
+
+.notifslider{
+
+    background-color: wheat;
+    position: absolute;
+    width: 200px;
+    height: 532px;
+    left:89px;
+    top:68px;
+    z-index: 10;
+    animation: slider 0.3s ease-in forwards;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+.notifslidernight{
+    
+    background-color: rgb(6, 27, 77);
+    position: absolute;
+    width: 200px;
+    height: 532px;
+    left:89px;
+    top:68px;
+    z-index: 10;
+    animation: slider 0.3s ease-in forwards;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+
+@keyframes slider{
+    0%{
+
+        width:0px;
+
+    }
+
+    100%{
+
+        width:350px;
+
+
+    }
+}
+
+
+.notifsliderrev{
+
+    background-color: wheat;
+    position: absolute;
+    width: 200px;
+    height: 530px;
+    left:89px;
+    top:68px;
+    z-index: 10;
+    animation: sliderrev 0.3s ease-in forwards;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+.notifsliderrevnight{
+
+    background-color: rgb(1, 11, 35);
+    position: absolute;
+    width: 200px;
+    height: 530px;
+    left:89px;
+    top:68px;
+    z-index: 10;
+    animation: sliderrev 0.3s ease-in forwards;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+@keyframes sliderrev{
+    0%{
+
+        width:350px;
+
+    }
+
+    100%{
+
+        width:0px;
+
+    }
+}
+
+
+
+.headingslider{
+
+   font-size: 30px;
+   font-weight: 700;
+   margin-left:4px;
+   pointer-events: none;
+
+}
+
+
+.reqsandruler{
+    display:flex;
+    flex-direction:column;
+}
+
+.followreqs{
+    
+    margin-bottom: 10px;
+    background-color:white;
+    width: 97%;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 4px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.followreqsnight{
+
+    background-color: black;
+
+
+}
+
+
+.followreqsexpan{
+    
+    margin-bottom: 12px;
+    background-color:white;
+    width: 97%;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 4px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+
+
+
+.reqsruler{
+
+    border-color: rgb(0, 0, 0);
+    height: 1px;
+    width: 100%;
+
+}
+
+
+
+.nofollowplus{
+
+    fill: white;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    pointer-events: none;
+
+}
+
+.nofreqstext{
+    position: absolute;
+    left: 80px;
+    font-weight: 600;
+    top: 73px;
+
+}
+
+
+.onefreqtext{
+
+    position: absolute;
+    left: 70px;
+    font-weight: 600;
+    top: 68px;
+
+
+
+}
+
+.notifspfp{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border: orange 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    top:60px;
+    left: 10px;
+
+}
+
+.notifspfpnight{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border-radius: 50%;
+    position: absolute;
+    top:60px;
+    left: 10px;
+    border: rgb(2, 17, 102) 2px solid;
+}
+
+.candidates{
+    color:grey;
+    font-weight: 500;
+    font-size: 14px;
+    position: absolute;
+    top: 85px;
+    left: 70px;
+
+}
+
+.checkreqs{
+
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 310px;
+    top:75.5px;
+
+}
+
+
+.notifspfpone{
+    height: 45px;
+    width: 45px;
+    padding: 2px;
+    border: orange 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    top:66px;
+    left: 20px;
+    z-index: 1;
+
+}
+
+.notifspfponenight{
+    height: 45px;
+    width: 45px;
+    padding: 2px;
+    border: rgb(2, 17, 102) 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    top:66px;
+    left: 20px;
+    z-index: 1;
+
+}
+
+
+.notifspfptwo{
+    height: 45px;
+    width: 45px;
+    padding: 2px;
+    border: orange 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    top:58px;
+    left: 10px;
+
+}
+
+.notifspfptwonight{
+    height: 45px;
+    width: 45px;
+    padding: 2px;
+    border: rgb(2, 17, 102) 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    top:58px;
+    left: 10px;
+
+}
+
+.pfpslider{
+
+    object-fit: fill;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: absolute;
+    left:-0.9px;
+    top:-2px;
+    transform: translateX(1px);
+
+
+}
+
+.pfpsliderup{
+
+    object-fit: cover;
+    border-radius: 50%;
+    height: 48px;
+    width: 50px;
+    position: absolute;
+    left: 0.5px;
+    top:-0.9px;
+    padding:1px;
+
+}
+
+.pfpsliderupcover{
+
+    object-fit: cover;
+    border-radius: 50%;
+    height: 43px;
+    width: 43px;
+    position: absolute;
+    left: 0.1px;
+    top:-0.9px;
+    padding:1px;
+
+}
+
+
+
+.pfpsliderupcoverone{
+
+    object-fit: cover;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    left: -0.4px;
+    top:-0.5px;
+    padding:1px;
+
+}
+
+
+
+
+.allreqsslider{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: opener 0.3s ease-in forwards;
+    margin-bottom: 10px;
+}
+
+.allreqssliderclosed{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: closer 0.3 ease-in forwards;
+}
+
+
+.allreqsslidermorethanthree{
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: openerthreeplus 0.3s ease-in forwards;
+}
+
+
+.allreqsslidermorethanthreeclosed{
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: closer 0.3s ease-in forwards;
+}
+
+@keyframes closer {
+    100%{
+        height: 0px;
+    }
+}
+
+@keyframes openerthreeplus {
+    0%{
+        height: 0px;
+    }
+    100%{
+       height: 200px;
+    }
+}
+
+
+@keyframes openerthreeplus {
+    0%{
+        height: 0px;
+
+    }
+    100%{
+        height: 250px;
+       
+    }
+}
+
+
+.eachreq{
+
+    display: flex;
+    margin-top:1px;
+    background-color: white;
+    height: 60px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 97%;
+    transform: translateX(6px);
+    margin-bottom: 6px;
+    position: relative;
+
+
+
+}
+
+.eachreqnight{
+
+    display: flex;
+    /* flex-direction: column; */
+    margin-top:1px;
+    background-color: black;
+    height: 60px;
+    box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 97%;
+    transform: translateX(6px);
+    margin-bottom: 6px;
+    position: relative;
+
+
+
+}
+
+
+
+
+
+.candidatesdropdown{
+    color:grey;
+    font-weight: 500;
+    font-size: 14px;
+    position: absolute;
+    top: 27px;
+    left: 60px;
+    pointer-events: none;
+
+}
+
+.candidatesdropdownlarge{
+    color:grey;
+    font-weight: 500;
+    font-size: 10px;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    pointer-events: none;
+
+}
+
+
+.onefreqtextdropdown{
+ 
+    position: absolute;
+    font-weight: 600;
+    top: 7px;
+    left: 60px;
+
+}
+
+.notifspfpdropdown{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border: orange 2px solid;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.notifspfpdropdownnight{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border: rgb(2, 17, 102) 2px solid;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+
+.notifspfpdropdownup{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border: orange 2px solid;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.notifspfpdropdownupnight{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    border: rgb(2, 17, 102) 2px solid;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.reqdeleter{
+    height:30px;
+    width:70px;
+    margin-top: 14px;
+    background-color: rgb(91, 89, 89);
+    color:white;
+    border-radius: 8px;
+
+}
+
+
+.confirmbut{
+
+    height:30px;
+    width:70px;
+    margin-top: 14px;
+    margin-left: 170px;
+    background-color: rgb(53, 141, 224);
+    color:white;
+    border-radius: 8px;
+    margin-right:5px ;
+
+}
+
+
+.slideback{
+    width: 98%;
+    height: 30px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+.slidebacknight{
+    width: 98%;
+    height: 30px;
+    box-shadow: 0px 5px 18px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+.chevup{
+    margin-left: 150px;
+    height: 30px;
+    width: 30px;
+
+}
+
+
+.lastseven{
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 300px;
+    margin-left: 4px;
+    width: 97%;
+    margin-bottom: 10px;
+
+
+}
+
+
+
+.lastsevenplus{
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 130px;
+    margin-left: 4px;
+    width: 97%;
+    margin-bottom: 10px;
+
+
+}
+
+
+.generictemplate{
+
+    display: flex;
+    margin-top:6px;
+    background-color: white;
+    height: 60px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 97%;
+    transform: translateX(6px);
+    margin-bottom: 6px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+
+
+
+.onefreqtextothers{
+
+    margin-top: 8px;
+    cursor: pointer;
+    margin-left: 62px;
+
+}
+
+
+
+
+.imgtemplate{
+
+    display: flex;
+    margin-top:5px;
+    background-color:white;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 97%;
+    transform: translateX(6px);
+    margin-bottom: 6px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+
+.imgtemplatereqac{
+
+    display: flex;
+    margin-top:5px;
+    height: 70px;
+    background-color: white;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 97%;
+    transform: translateX(6px);
+    margin-bottom: 6px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.candidatesdropdownreqac{
+
+    color:grey;
+    font-weight: 500;
+    font-size: 14px;
+    position: absolute;
+    top: 45px;
+    left: 62px;
+
+}
+
+
+
+
+.thepostinquestion{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    margin-left: 258px;
+    margin-top: 5px;
+    position: absolute;
+    object-fit: cover;
+
+}
+
+
+
+.textblock{
+    width: 210px;
+    overflow-wrap: break-word;
+    margin-left: 62px;
+    margin-top: 12px;
+    display: block;
+
+}
+
+.textblockc{
+    width: 190px;
+    overflow-wrap: break-word;
+    margin-left: 60px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.thenotif{
+
+    font-size: 14px;
+    line-height: 1.3;
+
+}
+
+
+.candidatesdropdownc{
+
+    color:grey;
+    font-weight: 500;
+    font-size: 14px;
+    top: 45px;
+    left: 62px;
+
+}
+
+.sevenheading{
+    font-weight: 600;
+    font-size: 24px;
+    margin: 7px;
+    pointer-events: none;
+}
+
+.thirtyheading{
+    font-weight: 600;
+    font-size: 24px;
+    margin: 7px;
+    pointer-events: none;
+}
+
+.lastthirty{
+
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 300px;
+    margin-left: 4px;
+    width: 97%;
+    margin-bottom: 10px;
+
+}
+
+
+.lastthirtyplus{
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 130px;
+    margin-left: 4px;
+    width: 97%;
+    margin-bottom: 10px;
+
+
+}
+
+.olderhead{
+    font-weight: 600;
+    font-size: 24px;
+    margin: 7px;
+    pointer-events: none;
+}
+
+
+.oldernotifs{
+
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 300px;
+    margin-left: 4px;
+    width: 97%;
+    margin-bottom: 10px;
+
+
+}
+
+
+.oldernotifsplus{
+    width: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 130px;
+    margin-left: 4px;
+    width: 97%;
+    margin-bottom: 10px;
+
+
+}
+
+
+
+
+.loadingiconnotifs{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 151px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%; 
+    border: 3px solid grey; 
+    border-right-color:rgb(255, 0, 0);
+    animation-name:loading;
+    animation-iteration-count:infinite;
+    animation-duration:0.3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards;
+    pointer-events: none;
+}
+
+
+@keyframes loading{
+    100%{
+      transform : rotate(360deg)
+    }
+}
+
+
+
+
+
+
+.chevup:hover{
+    color: rgb(103, 104, 104);
+}
+
+.confirmbut:hover{
+    background-color: rgb(93, 183, 243);
+}
+
+.reqdeleter:hover{
+    background-color: rgb(143, 141, 141);
+}
+
+.followreqs:hover{
+    background-color: rgb(177, 177, 177);
+}
+
+.followreqsnight:hover{
+    background-color: rgb(74, 74, 74);
+}
+
+.hidd{
+    display: none;
+}
+
+
+
+
+.falsestory{
+    width: 120px;
+    height: 145px;
+    position: relative;
+
+}
+
+.falsestorycircle{
+
+    width: 100px;
+    height: 100px;
+    background-color: rgb(179, 178, 178);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(8%,10%);
+    overflow: hidden;
+    
+
+}
+
+.falsestoryposter{
+    width: 82px;
+    height: 15px;
+    background-color: rgb(179, 178, 178);
+    top: 99%;
+    left: 50%;
+    transform: translate(22%,140%);
+    overflow: hidden;
+}
+
+.shimmer-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: shimmering 2.5s infinite ;
+}
+
+.shimmer{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    transform: skewX(-20deg);
+}
+
+@keyframes shimmering{
+    0% {
+       transform: translateX(-150%)
+    }
+
+    50%{
+       transform: translateX(-60%)
+    }
+    100%{
+        transform: translateX(150%);
+    }
+}
+
+
+.falsesuggestions{
+
+    height: 400px;
+    width: 300px;
+    display: block;
+
+}
+
+.eachfalsesugg{
+
+    height: 80px;
+    width: 250px;
+    margin-top: -5px;
+    position: relative;
+
+}
+
+.falsesuggcircle{
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgb(179, 178, 178);
+    overflow: hidden;
+    position: absolute;
+    top:5px;
+    left:15px;
+
+
+}
+
+.falsesuggusername{
+
+    height: 13px;
+    width: 80px;
+    background-color: rgb(179, 178, 178);
+    overflow: hidden;
+    margin-left: 80px;
+    margin-top: 20px;
+    position: absolute;
+
+
+}
+
+.falsesugguserfname{
+
+    height: 10px;
+    width: 90px;
+    background-color: rgb(179, 178, 178);
+    overflow: hidden;
+    margin-left: 80px;
+    margin-top: 40px;
+    position: absolute;
+
+
+}
+
+
+.crossbell{
+    height: 70px;
+    width: 70px;
+    color: rgb(202, 202, 202);
+    position: absolute;
+    top:20px;
+    left: 133px;
+}
+
+.crossbelltext{
+
+    font-size: 20px;
+    color: rgb(202, 202, 202);
+    margin-bottom: 50px;
+    margin-left: 100px;
+    position: absolute;
+    top:90px;
+
+}
+
+.leftpnight{
+    color: white;
+}
+
+.bgnight{
+    background-color: black;
+}
+
+.bgnightshadow{
+    background-color: black;
+    box-shadow: 0px 5px 7px 0px rgba(255, 255, 255, 0.5);
+}

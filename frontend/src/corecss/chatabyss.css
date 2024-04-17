@@ -1,0 +1,301 @@
+.textabyss{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+.textabyssupper{
+    display: flex;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.abysspfp{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit:fill;
+    margin-right: 10px;
+    border: 1px solid wheat;
+}
+
+.abysspfpskeleton{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(179, 178, 178);
+}
+
+
+.themessager{
+
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(30, 36, 36);
+    color: white;
+    max-width: 300px;
+    cursor:pointer;
+
+
+}
+
+.textabyss.own .themessager{
+    background-color: #1877f2;
+
+}
+
+.themessager:hover{
+    scale: 1.05;
+}
+
+.themessager:hover ~ .redstamp{
+    visibility: visible;
+}
+
+
+.themessager:hover ~ .timestamp{
+    visibility: visible;
+}
+
+.thelongmessager{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(30, 36, 36);
+    color: white;
+    max-width: 300px;
+    cursor:pointer;
+}
+
+
+.timestamp{
+    color:rgb(77, 77, 77);
+    font-size:small;
+    visibility: hidden;
+    cursor: none;
+    margin-top: 12px;
+    margin-left: 14px;
+}
+
+.redstamp{
+    color:rgb(23, 22, 22);
+    font-size:small;
+    visibility: hidden;
+    cursor: none;
+    margin-top: 12px;
+    margin-left: 14px;
+}
+
+
+
+
+.thelongmessager:hover{
+    scale: 1.02;
+} 
+
+
+
+.thelongmessager:hover ~ .timestamp{
+    visibility: visible;
+}
+
+
+
+.thelongmessager:hover ~ .redstamp{
+    visibility: visible;
+}
+
+.textabysslower{
+    font-size:12px;
+    margin-top: 10px;
+}
+
+.textabyss.own{
+    align-items: flex-end;
+}
+
+
+
+.textabyss.own .thelongmessager{
+    background-color: #1877f2;
+}
+
+.textabyss.own .timestamp{
+    margin-right:14px;
+    order:-1;
+}
+
+.textabyss.own .redstamp{
+    margin-right:14px;
+    order:-1;
+}
+
+.textoptions{
+    font-size: 1.1em;
+    color: #fff;
+    background: rgb(169, 169, 169);
+    position: relative;
+    border-radius: 10px;
+    max-width: 200px;
+    order:-1;
+    height: 38px;
+    margin-top: 3.08px;
+    display: flex;
+}
+
+.textoptions::after{
+    content: "";
+    border: 18px solid transparent;
+    position: absolute;
+}
+
+.right.textoptions::after {
+    border-left-color:  rgb(169, 169, 169);
+    border-right: 0;
+    right: -6px;
+    top: 50%;
+    margin-top: -18px;
+}
+
+.delete{
+    margin:7px;
+    margin-right: -1px;
+    cursor:pointer;
+    margin-top: 3px;
+}
+
+.copy{
+    margin:7px;
+    cursor:pointer;
+    margin-top: 3px;
+}
+
+.cancel{
+    margin:7px;   
+    margin-right: 4px;
+    cursor:pointer;
+    margin-top: 3px;
+}
+
+.select{
+    margin:7px;
+    margin-right: -2px;
+    cursor:pointer;
+    margin-top: 3px;
+    
+}
+
+.delete:hover{
+    scale:1.2;
+}
+
+.copy:hover{
+    scale:1.2;
+}
+
+.select:hover{
+    scale:1.2;
+}
+
+.cancel:hover{
+    scale:1.2;
+}
+
+
+.greendisplay{
+
+    border-radius: 17px;
+    animation-name:copied;
+    animation-iteration-count:1;
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards; 
+
+}
+
+
+@keyframes copied{
+    0%{
+      background-color:rgb(154, 226, 87);
+    }
+    100%{
+      background-color:rgb(255, 255, 255);
+    }
+}
+
+@keyframes selected{
+    0%{
+      color:rgb(67, 2, 15);
+    }
+    100%{
+        color:rgb(228, 97, 123);
+    }
+}
+
+@keyframes hider{
+    0%{
+
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+
+.status{
+    color:#26975b;
+    order:-1;
+    font-style: italic;
+    font-weight: 600;
+    font-family: fantasy;
+    font-size: 20px;
+    padding-top: 6px;
+    padding-right:20px;
+}
+
+
+.reddisplay{
+
+    border-radius: 19px;
+    background-color: rgb(228, 97, 123);
+    animation-name:selected;
+    animation-iteration-count:1;
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards; 
+
+}
+
+
+.statusred{
+   
+    
+    color:rgb(228, 97, 123);
+    order:-1;
+    font-style: italic;
+    font-weight: 600;
+    font-family: fantasy;
+    font-size: 20px;
+    padding-top: 6px;
+    padding-right:20px;
+    visibility: hider;
+    animation-name:selected;
+    animation-iteration-count:1;
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwards; 
+
+}
+
+
+.invisibility{
+    visibility: hidden;
+}
+
+
+.timenight{
+    color:whitesmoke;
+}

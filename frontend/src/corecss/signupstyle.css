@@ -1,0 +1,102 @@
+.totaldiv{
+
+    width:100px; height:100px;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    height: 100vh;
+    width: 1289px;
+
+}
+
+.letin{
+    height: 40px;
+    width: 250px;
+    margin-left: -5px;
+    font-weight: 600;
+    color: white;
+
+}
+
+.letin:disabled{
+    filter: grayscale(1);
+    color:rgb(229, 227, 227);
+}
+
+.alreadyacc{
+    font-size:15px;
+    cursor: pointer;
+    margin-top:-10px;
+    text-align: center;
+
+}
+
+.alreadyacc:hover{
+    font-weight: 500;
+}
+
+.signupruler{
+    margin-top: 5px;
+    width: 250px;
+    height: 2px;
+    margin-left: -5px;
+}
+
+.signupemail{
+    width: 250px;
+    margin-left: -5px;
+    padding-left: 13px;
+}
+
+.signupfullname{
+    width: 250px;
+    margin-left: -5px;
+    padding-left: 13px;
+}
+
+.signuppassword{
+    width: 250px;
+    margin-left: -5px;
+    padding-left: 13px;
+}
+
+.signupusername{
+    width: 250px;
+    padding-left: 13px;
+    margin-left: -5px;
+}
+
+.redemail{
+
+    margin-top: -10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+
+}
+
+.greenemail{
+
+    margin-top: -10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+
+}
+
+.redusername{
+
+    margin-top: -10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+
+}
+
+.greenusername{
+
+    margin-top: -10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+
+}
+

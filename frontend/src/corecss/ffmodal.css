@@ -1,0 +1,131 @@
+.createformff{
+    position: fixed;
+    top: 33%;
+    left: 46%;
+    transform: 'translate(-50%,-50%)';
+    padding: 50px;
+    z-index: 100;
+    width: 350px;
+    height: 240px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.createformplusff{
+    position: fixed;
+    top: 28%;
+    left: 46%;
+    transform: 'translate(-50%,-50%)';
+    padding: 50px;
+    z-index: 100;
+    width: 350px;
+    height: 330px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.nightffbg{
+    background-color: black;
+}
+
+.blurremainff{ 
+
+    position: absolute;
+    top:60px; 
+    left:260px;
+    height: calc(100vh - 60px);
+    width: 1029px;
+    backdrop-filter: blur(2px); 
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100; 
+}
+
+
+
+.headerff{
+    
+    font-size: 30px;
+    margin-left: -112px;
+}
+
+.afterheading{
+    margin-top: 8px;
+    width: 320px;
+    margin-left: -35px;
+    margin-bottom: 10px;
+}
+
+.cancelff{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 16px;
+    left: 300px;
+    cursor: pointer;
+}
+
+.eachperson{
+    height: 65px;
+    width: 320px;
+    margin: 4px;
+    margin-left: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.ffpfp{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+}
+
+
+.ffname{
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    font-size: 20px;
+
+}
+
+
+.allff{
+    overflow-y: scroll;
+    background-color: rgb(246, 242, 207);
+    width: 320px;
+    margin-left: -35px;
+    overflow-x: hidden;
+    height: 160px;
+
+}
+
+.allffnight{
+    
+    background-color: rgb(109, 109, 109);
+    
+}
+
+
+.allffplus{
+    overflow-y: scroll;
+    background-color: rgb(246, 242, 207);
+    width: 320px;
+    margin-left: -35px;
+    overflow-x: hidden;
+    height: 250px;
+
+}
+
+.allffplusnight{
+    background-color: rgb(109, 109, 109);
+}
+
+
+.textnightff{
+    color:white;
+}

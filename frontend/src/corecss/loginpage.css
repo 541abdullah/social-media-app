@@ -1,0 +1,90 @@
+.totaldivlog{
+
+    width:100px; height:100px;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    height: 100vh;
+    width: 1289px;
+
+}
+
+.usernamelog{
+
+    height: 50px;
+    width: 250px;
+    padding:10px;
+    font-size: 20px;
+    border: rgb(206, 204, 204) 1px solid;
+    
+
+
+}
+
+
+.passlog{
+
+    height: 50px;
+    width: 250px;
+    padding:10px;
+    font-size: 20px;
+    margin-top: 10px;
+    border: rgb(206, 204, 204) 1px solid;
+    
+
+}
+
+.logger{
+
+    height: 50px;
+    width: 250px;
+    margin-left: 0px;
+    margin-top: 25px;
+    color:white;
+
+
+}
+
+.mainblock{
+
+
+    width: 333px;
+    height: 400px;
+
+
+}
+
+.rulerlog{
+
+    position: absolute;
+    top:300px;
+    left:40px;
+    width: 250px;
+    height: 3px;
+
+
+}
+
+.wrongentry{
+
+    position: absolute;
+    font-size: 18px;
+    left:40px;
+    top:260px;
+
+}
+
+.unreg{
+    position: absolute;
+    font-size: 15px;
+    left:65px;
+    top:280px;
+    cursor: pointer;
+}
+
+.unreg:hover{
+    font-weight: 600;
+    
+}

@@ -1,0 +1,233 @@
+.storyform{
+    position: fixed;
+    top: 30%;
+    left: 46%;
+    transform: 'translate(-50%,-50%)';
+    padding: 50px;
+    z-index: 100;
+    width: 400px;
+    height: 260px;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.storyformbig{
+    position: fixed;
+    top: 30%;
+    left: 46%;
+    transform: 'translate(-50%,-50%)';
+    padding: 50px;
+    z-index: 100;
+    width: 400px;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.nightbgstory{
+    background-color: rgb(6, 27, 77);
+}
+
+
+.blurremains{
+
+    position: absolute;
+    top:65px; 
+    left:283px;
+    height: calc(100vh - 65px);
+    width: 1006px;
+    backdrop-filter: blur(3px); 
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100; 
+    
+}
+
+
+
+h1{
+    font-size: 25px;
+    font-weight: 600;
+    position: absolute;
+    top: 4px;
+    left: 132px;
+
+}
+
+
+
+.input-groups{
+    position: absolute;
+    top:70px;
+    left:40px;
+
+}
+
+.uploaders{
+    height: 40px;
+    width: 40px;
+}
+
+.hiders {
+
+    padding: 5px 10px;
+    background: rgb(208, 206, 206);
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    left: 80px;
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.37); 
+    box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.8);
+    border: 1px solid black;
+    top:-5px;
+    width: 160px;
+    
+
+}
+
+.hidersnight{
+    color:rgb(71, 71, 71);
+}
+
+.hiders:hover {
+    transform: scale(1.1);
+}
+
+.choicelable{
+    cursor: pointer;
+}
+
+#filess{
+
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+
+}
+
+.imglabels{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    width: 150px;
+
+}
+
+.submits{
+    position: absolute;
+    top: 260px;
+    height: 30px;
+    width: 70px;
+    background-color: rgb(0, 119, 255);
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    left: 165px;
+
+
+}
+
+.submits:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.37); 
+    box-shadow: -1px 3px 12px -3px rgba(0,0,0,0.8);
+}
+
+
+.cancelspost{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    top:-45px;
+    left:300px;
+    cursor:pointer;
+    color:black;
+}
+
+
+
+#storytype{
+    width: 100px;
+    position: absolute;
+    top:176px;
+    outline: none;
+    left: 150px;
+    border:rgb(0, 119, 255) 2px solid;
+    border-radius: 10px;   
+    padding-bottom: 2px;
+
+}
+
+#storytypenight{
+    width: 100px;
+    position: absolute;
+    top:176px;
+    outline: none;
+    left: 150px;
+    border:grey 2px solid;
+    border-radius: 10px;   
+    padding-bottom: 2px;
+    color:white;
+    background-color: black;
+}
+
+
+.typelabel{
+
+   position: absolute;
+   font-size: 18px;
+   font-weight: 600;
+   top: 135px;
+   width: 150px;
+   left:133px;
+
+}
+
+.fallbackimg{
+    color:red;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    left:124px;
+    top:110px;
+    animation: beatred 0.5s 3 backwards ease-in;
+}
+
+.wrongextension{
+    color:red;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    left:75px;
+    top:110px;
+    animation: beatred 0.5s 3 backwards ease-in;
+}
+
+@keyframes beatred {
+
+    0%{
+       transform: scale(1);
+    }
+    50%{
+        transform: scale(1.01);
+    }
+    100%{
+        transform: scale(1);
+     }
+    
+}
+
+
+.nighttextstory{
+    color:white;
+}

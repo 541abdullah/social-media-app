@@ -1,0 +1,189 @@
+.header{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+}
+
+.headernight{
+    background-color: black;
+}
+
+.headerleft{
+    flex: 4
+}
+
+.headerright{
+    flex: 4;
+    display: flex;
+    margin-left: 900px;
+    position: relative;
+
+}
+
+.logo{
+
+    height: 60px;
+    width: 60px;
+    margin-left: 3px;
+    margin-top: 3px;
+
+
+}
+
+.logonight{
+
+    color: white;
+
+
+}
+
+
+
+.texts{
+    margin: 6px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.textsnight{
+    color:white;
+}
+
+.notifs{
+    margin: 6px;
+    cursor:pointer;
+    
+    
+}
+
+.self{
+    margin-top: 6px;
+    margin-left: 40px;
+    cursor:pointer
+}
+
+.smallpfp{
+    position: absolute;
+    right:10px;
+    top:-4px;
+    cursor:pointer;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.smallpfpnight{
+    border: solid 2px white;
+}
+
+
+.fortexts{
+ 
+    position:absolute;
+    right: 134px;
+    top: -1px;
+
+}
+
+.countertexts{
+
+    position: absolute;
+    right: 141px;
+    top: -1px;
+    color: wheat;
+    font-weight: 600;
+    z-index: 1;
+
+}
+
+
+.countertextsdouble{
+
+    position: absolute;
+    right: 139px;
+    top: -1px;
+    color: wheat;
+    font-weight: 600;
+    z-index: 1;
+
+    
+}
+
+
+.theme{
+    top:7px;
+    left:80px;
+    cursor:pointer;
+    position: absolute;
+
+}
+
+.lightmode{
+
+    cursor:pointer;
+    position: absolute;
+    color:white;
+
+}
+
+.darkmode{
+
+    cursor:pointer;
+    position: absolute;
+
+}
+
+
+
+.falseuser{
+
+
+    background-color: rgb(179, 178, 178);
+    overflow: hidden;
+    position: absolute;
+    right:10px;
+    top:-4px;
+    cursor:pointer;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+
+
+}
+
+
+.shimmer-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: shimmering 2.5s infinite ;
+}
+
+.shimmer{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    transform: skewX(-20deg);
+}
+
+@keyframes shimmering{
+    0% {
+       transform: translateX(-150%)
+    }
+
+    50%{
+       transform: translateX(-60%)
+    }
+    100%{
+        transform: translateX(150%);
+    }
+}

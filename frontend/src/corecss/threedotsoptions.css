@@ -1,0 +1,120 @@
+.alloptions{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    width: 350px;
+    height: 260px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.alloptionsnight{
+    
+    background-color: rgb(47, 47, 47);
+    
+}
+
+.blurremaino{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100vh;
+    width: 1290px;
+    backdrop-filter: blur(2px);
+    background-color: rgb(0,0,0,0.7); 
+    z-index: 100;
+}
+
+
+
+
+.optionx{
+
+    flex-grow: 1;
+    border-bottom: rgb(102, 102, 102) 1px solid;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+#bar0:hover{
+    background-color: rgb(184, 181, 181);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+
+#barnight0:hover{
+    background-color: rgb(32, 32, 32);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    
+}
+
+.optionx:hover{
+ 
+    background-color: rgb(184, 181, 181);
+
+
+}
+
+
+.optionxnight:hover{
+ 
+    background-color: rgb(32, 32, 32);
+
+
+}
+
+.optionlast{
+
+    position: relative;
+    flex-grow: 1;
+    cursor: pointer;
+
+}
+
+.optionlast:hover{
+
+    background-color: rgb(184, 181, 181);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+}
+
+
+.optionlastnight:hover{
+
+    background-color: rgb(32, 32, 32);
+    
+}
+
+.eachopt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.eachoptred{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    font-size: 19px;
+    color: crimson;
+}
+
+
+.textnightthreeops{
+    color:white;
+}

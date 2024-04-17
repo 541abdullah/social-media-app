@@ -1,0 +1,72 @@
+.blockmodal{
+    position: fixed;
+    top: 19.5%;
+    left: 43.3%;
+    transform: 'translate(-50%,-50%)';
+    padding: 50px;
+    z-index: 100;
+    width: 420px;
+    height: 400px;
+    overflow:hidden;
+    text-align: center;
+}
+
+.blurremainb{
+
+    position: absolute;
+    top:65px; 
+    left:283px;
+    height: calc(100vh - 65px);
+    width: 1006px;
+    backdrop-filter: blur(6px); 
+    background-color: rgba(187, 187, 187, 0.7);
+    z-index: 100; 
+
+}
+
+
+.noeye{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top:80px;
+    left:105px;
+    stroke: rgb(89, 88, 88);
+}
+
+.blocktext{
+
+    font-size: 23px;
+    color: rgb(54, 53, 53);
+    width: 285px;
+    font-weight: 600;
+
+
+}
+
+
+.helperp{
+    margin-top:230px;
+}
+
+
+
+
+.unblockpls{
+
+    position: absolute;
+    font-size: 18px;
+    top:340px;
+    color: white;
+    background-color: rgb(112, 112, 112);
+    width: 285px;
+    height: 40px;
+    left:72px;
+    font-weight: 500;
+    border-radius: 10px;
+
+}
+
+.unblockpls:hover{
+    border: 2px gold solid;
+}
