@@ -1,6 +1,6 @@
 const router = require('express').Router();
-let Userdetail = require('../../models/userdet.js');
-let Notif = require('../../models/notifs.js');
+let Userdetail = require('../models/userdet.js');
+let Notif = require('../models/notifs.js');
 
 
 router.post("/:username", async (req, res) => {

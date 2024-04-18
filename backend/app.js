@@ -16,11 +16,11 @@ let dotenv = require('dotenv');
 
 "use client";
 
-const userRoute = require("./backend/routes/users");
-const postRoute = require("./backend/routes/userposts");
-const storyRoute = require("./backend/routes/storystuff");
-const notifRoute = require("./backend/routes/notif");
-const detschangeRoute = require("./backend/routes/detschange");
+const userRoute = require("./routes/users");
+const postRoute = require("./routes/userposts");
+const storyRoute = require("./routes/storystuff");
+const notifRoute = require("./routes/notif");
+const detschangeRoute = require("./routes/detschange");
 
 
 dotenv.config();
@@ -96,44 +96,6 @@ mongoose.connect(dbURI)
         console.log(error);
     });
 
-
-
-
-// const dbconnection = async ()=>{
-//     try{
-//         await mongoose.connect(process.env.MONGO_dblink);
-//         console.log("connection mader");
-//             app.listen(3001);
-        
-//     }
-//     catch(err){
-//         console.log(err);
-//     }
-// }
-
-// dbconnection();
-
-
-
-
-
-// const mongo = require('./mongo.js');
-
-// async function helper(){
-
-//     await mongo().then(mongoose => {
-//         try {
-//             console.log('Connected to mongo!!');
-//             app.listen(3001);
-//         }
-//         finally {
-//             mongoose.connection.close();
-//         }
-//     });
-
-// }
-
-// helper();
 
 
 
