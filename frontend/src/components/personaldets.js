@@ -70,6 +70,10 @@ const Personaldets = () => {
     let dis = useDispatch();
 
 
+     //let url = "http://localhost:3001";
+     let url = "https://social-media-app-backend-final.onrender.com";
+
+
     useEffect(() => {
         let genderlist = ['Male', 'Female', 'Rather not say'];
         setGenderselection(genderlist.filter((each) => each != gender));
@@ -86,7 +90,7 @@ const Personaldets = () => {
 
             async function pfpchanger() {
 
-                await fetch(`http://localhost:3001/detschange/changepfp/${username}`, {
+                await fetch(`${url}/detschange/changepfp/${username}`, {
                     method: 'POST',
                     headers: { 'Content-Type': "application/json" },
                     body: JSON.stringify({ newpfp: reader.result }),
@@ -322,7 +326,7 @@ const Personaldets = () => {
 
             }, 4000)
 
-            fetch(`http://localhost:3001/users/userupdate/${curuser.userid}`, {
+            fetch(`${url}/users/userupdate/${curuser.userid}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(updateobj),
@@ -351,7 +355,7 @@ const Personaldets = () => {
             setLoader(false);
 
             dis(loadersets(false));
-            fetch(`http://localhost:3001/logout`, {
+            fetch(`${url}/logout`, {
                 credentials: 'include',
             })
             nav('/', { replace: true });
@@ -379,7 +383,7 @@ const Personaldets = () => {
 
         let deleteobj = { "username": username };
 
-        fetch(`http://localhost:3001/users/userdelete/${curuser.userid}`, {
+        fetch(`${url}/users/userdelete/${curuser.userid}`, {
             method: 'DELETE',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(deleteobj),

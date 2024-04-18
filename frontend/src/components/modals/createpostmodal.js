@@ -27,6 +27,9 @@ const Createmodal = ({ trigger, extra }) => {
         thepost: null
     })
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
     function resizeBase64Img(base64, newWidth, newHeight) {
         return new Promise((resolve, reject) => {
             const canvas = document.createElement("canvas");
@@ -62,7 +65,7 @@ const Createmodal = ({ trigger, extra }) => {
         finaldata.username = curuser.usrn;
         finaldata.pfp = curuser.pfp;
 
-        const result = await fetch(`http://localhost:3001/posts/create`, {
+        const result = await fetch(`${url}/posts/create`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(finaldata),
@@ -84,7 +87,7 @@ const Createmodal = ({ trigger, extra }) => {
                 pfp: curuser.pfp
             }
 
-            const thirdresult = await fetch(`http://localhost:3001/posts/create`, {
+            const thirdresult = await fetch(`${url}/posts/create`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),

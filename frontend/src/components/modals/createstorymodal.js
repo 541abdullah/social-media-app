@@ -22,6 +22,9 @@ const Storymodal = ({ trigger, changes, current }) => {
     let theme = useSelector((state) => { return state.themeyr.value });
     let curuser = useSelector((state) => { return state.youryr.value });
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
 
 
     function resizeBase64Img(base64, newWidth, newHeight) {
@@ -48,7 +51,7 @@ const Storymodal = ({ trigger, changes, current }) => {
 
         e.preventDefault();
 
-        const result = await fetch(`http://localhost:3001/story/create/${curuser.usrn}`, {
+        const result = await fetch(`${url}/story/create/${curuser.usrn}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(data),
@@ -64,7 +67,7 @@ const Storymodal = ({ trigger, changes, current }) => {
                 type: data.type,
                 thepost: secondresult
             }
-            const thirdresult = await fetch(`http://localhost:3001/story/create/${curuser.usrn}`, {
+            const thirdresult = await fetch(`${url}/story/create/${curuser.usrn}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),

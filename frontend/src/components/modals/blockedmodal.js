@@ -10,11 +10,14 @@ const Blockedmodal = ({ text, doer, other, extra }) => {
   let curuser = useSelector((state) => { return state.youryr.value });
   let [loader, setLoader] = useState(false);
 
+  //let url = "http://localhost:3001";
+  let url = "https://social-media-app-backend-final.onrender.com";
+
   const unblocker = () => {
 
     async function unblocker() {
 
-      await fetch(`http://localhost:3001/users/unblock/${curuser.usrn}`, {
+      await fetch(`${url}/users/unblock/${curuser.usrn}`, {
         method: 'PUT',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify({ "username": other }),

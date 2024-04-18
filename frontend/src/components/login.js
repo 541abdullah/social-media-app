@@ -15,6 +15,9 @@ const Login = () => {
     let dis = useDispatch();
     let nav = useNavigate();
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
 
     let preventer = (e) => {
         e.preventDefault();
@@ -25,7 +28,7 @@ const Login = () => {
         let user = formdata.get('username');
         let logincred = { username: user, password: pass };
 
-        fetch("http://localhost:3001/login", {
+        fetch(`${url}/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(logincred),

@@ -67,6 +67,9 @@ const Leftpain = ({ parent }) => {
   let lastloaderolder = useRef(1);
   let firsttime = useRef(false);
 
+  //let url = "http://localhost:3001";
+  let url = "https://social-media-app-backend-final.onrender.com";
+
 
   if (ismessagesclicked) {
     disp(leftpsets('None'));
@@ -77,7 +80,7 @@ const Leftpain = ({ parent }) => {
   const fetchDataseven = useCallback(async () => {
 
 
-    const result = await fetch(`http://localhost:3001/notif/week/nextfive/${curuser.usrn}?skip=${skipvalseven}`, {
+    const result = await fetch(`${url}/notif/week/nextfive/${curuser.usrn}?skip=${skipvalseven}`, {
       credentials: 'include',
     })
 
@@ -99,7 +102,7 @@ const Leftpain = ({ parent }) => {
   const fetchDatathirty = useCallback(async () => {
 
 
-    const result = await fetch(`http://localhost:3001/notif/month/nextfive/${curuser.usrn}?skip=2`, {
+    const result = await fetch(`${url}/notif/month/nextfive/${curuser.usrn}?skip=2`, {
       credentials: 'include',
     })
 
@@ -121,7 +124,7 @@ const Leftpain = ({ parent }) => {
   const fetchDataolder = useCallback(async () => {
 
 
-    const result = await fetch(`http://localhost:3001/notif/older/nextfive/${curuser.usrn}?skip=${skipvalolder}`, {
+    const result = await fetch(`${url}/notif/older/nextfive/${curuser.usrn}?skip=${skipvalolder}`, {
       credentials: 'include',
     })
 
@@ -266,7 +269,7 @@ const Leftpain = ({ parent }) => {
 
     async function allreqgetter() {
 
-      const result = await fetch(`http://localhost:3001/notif/allreqs/${curuser.usrn}`, {
+      const result = await fetch(`${url}/notif/allreqs/${curuser.usrn}`, {
         credentials: 'include'
       })
 
@@ -280,7 +283,7 @@ const Leftpain = ({ parent }) => {
 
     async function initialtopseven() {
 
-      const result = await fetch(`http://localhost:3001/notif/week/nextfive/${curuser.usrn}?skip=0`, {
+      const result = await fetch(`${url}/notif/week/nextfive/${curuser.usrn}?skip=0`, {
         credentials: 'include',
       })
 
@@ -302,7 +305,7 @@ const Leftpain = ({ parent }) => {
 
     async function initialtopthirty() {
 
-      const result = await fetch(`http://localhost:3001/notif/month/nextfive/${curuser.usrn}?skip=0`, {
+      const result = await fetch(`${url}/notif/month/nextfive/${curuser.usrn}?skip=0`, {
         credentials: 'include',
       })
 
@@ -325,7 +328,7 @@ const Leftpain = ({ parent }) => {
 
     async function initialtopolder() {
 
-      const result = await fetch(`http://localhost:3001/notif/older/nextfive/${curuser.usrn}?skip=0`, {
+      const result = await fetch(`${url}/notif/older/nextfive/${curuser.usrn}?skip=0`, {
         credentials: 'include',
       })
 
@@ -347,7 +350,7 @@ const Leftpain = ({ parent }) => {
 
     async function numofnotifs() {
 
-      const result = await fetch(`http://localhost:3001/notif/new/${curuser.usrn}`, {
+      const result = await fetch(`${url}/notif/new/${curuser.usrn}`, {
         credentials: 'include',
       })
 
@@ -397,7 +400,7 @@ const Leftpain = ({ parent }) => {
 
       async function clearer() {
 
-        const result = await fetch(`http://localhost:3001/notif/allclear/${curuser.usrn}`, {
+        const result = await fetch(`${url}/notif/allclear/${curuser.usrn}`, {
           credentials: 'include'
         })
 
@@ -528,7 +531,7 @@ const Leftpain = ({ parent }) => {
 
     async function clearer() {
 
-      const result = await fetch(`http://localhost:3001/notif/clear/${curuser.usrn}/${key.from}`, {
+      const result = await fetch(`${url}/notif/clear/${curuser.usrn}/${key.from}`, {
         credentials: 'include'
       })
 
@@ -556,7 +559,7 @@ const Leftpain = ({ parent }) => {
         reference: null
       };
 
-      fetch(`http://localhost:3001/notif/${curuser.usrn}`, {
+      fetch(`${url}/notif/${curuser.usrn}`, {
         method: 'POST',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(newnotif),
@@ -574,7 +577,7 @@ const Leftpain = ({ parent }) => {
         reference: null
       };
 
-      fetch(`http://localhost:3001/notif/${key.from}`, {
+      fetch(`${url}/notif/${key.from}`, {
         method: 'POST',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(newnotiftwo),
@@ -589,7 +592,7 @@ const Leftpain = ({ parent }) => {
 
       };
 
-      fetch(`http://localhost:3001/notif/rem/${curuser.usrn}`, {
+      fetch(`${url}/notif/rem/${curuser.usrn}`, {
         method: 'DELETE',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(delnotif),
@@ -602,7 +605,7 @@ const Leftpain = ({ parent }) => {
         fullname: key.fromfname
       }
 
-      fetch(`http://localhost:3001/users/accepted/${curuser.usrn}`, {
+      fetch(`${url}/users/accepted/${curuser.usrn}`, {
         method: 'PUT',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(newobj),
@@ -619,7 +622,7 @@ const Leftpain = ({ parent }) => {
 
     async function clearer() {
 
-      const result = await fetch(`http://localhost:3001/notif/clear/${curuser.usrn}/${key.from}`, {
+      const result = await fetch(`${url}/notif/clear/${curuser.usrn}/${key.from}`, {
         credentials: 'include'
       })
 
@@ -641,7 +644,7 @@ const Leftpain = ({ parent }) => {
 
       };
 
-      fetch(`http://localhost:3001/notif/rem/${curuser.usrn}`, {
+      fetch(`${url}/notif/rem/${curuser.usrn}`, {
         method: 'DELETE',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(delnotif),

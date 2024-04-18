@@ -61,6 +61,10 @@ const Profile = () => {
     const notifprofile = useSelector((state) => { return state.notifprofilevisit.value });
     const currentprofview = useSelector((state) => { return state.profdat.value });
 
+
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
     useEffect(() => {
 
         if (nextrequestedprofimg) {
@@ -87,7 +91,7 @@ const Profile = () => {
 
         async function detgetter() {
 
-            const result = await fetch(`http://localhost:3001/users/visit/${viewperson}/${curuser.usrn}`, {
+            const result = await fetch(`${url}/users/visit/${viewperson}/${curuser.usrn}`, {
                 credentials: 'include'
             })
 
@@ -107,7 +111,7 @@ const Profile = () => {
 
         async function postfinder() {
 
-            const result = await fetch(`http://localhost:3001/posts/getallposts/${viewperson}`, {
+            const result = await fetch(`${url}/posts/getallposts/${viewperson}`, {
                 credentials: 'include'
             })
 
@@ -122,7 +126,7 @@ const Profile = () => {
         async function refresher() {
 
 
-            const result = await fetch('http://localhost:3001/welcome', {
+            const result = await fetch(`${url}/welcome`, {
                 credentials: 'include'
             })
 
@@ -153,7 +157,7 @@ const Profile = () => {
 
         async function alreadyreq() {
 
-            const result = await fetch(`http://localhost:3001/notif/alreadyreqd/${viewperson}/${curuser.usrn}`, {
+            const result = await fetch(`${url}/notif/alreadyreqd/${viewperson}/${curuser.usrn}`, {
                 credentials: 'include'
             })
 
@@ -170,7 +174,7 @@ const Profile = () => {
 
     const followclicked = async () => {
 
-        fetch(`http://localhost:3001/users/follow/${viewperson}`, {
+        fetch(`${url}/users/follow/${viewperson}`, {
             method: 'PUT',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ "username": curuser.usrn }),
@@ -193,7 +197,7 @@ const Profile = () => {
 
         };
 
-        fetch(`http://localhost:3001/notif/${viewperson}`, {
+        fetch(`${url}/notif/${viewperson}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newnotif),
@@ -213,7 +217,7 @@ const Profile = () => {
 
         };
 
-        fetch(`http://localhost:3001/notif/rem/${viewperson}`, {
+        fetch(`${url}/notif/rem/${viewperson}`, {
             method: 'DELETE',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(delnotif),
@@ -221,7 +225,7 @@ const Profile = () => {
         })
 
 
-        fetch(`http://localhost:3001/users/followcancel/${viewperson}`, {
+        fetch(`${url}/users/followcancel/${viewperson}`, {
             method: 'PUT',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ "username": curuser.usrn }),

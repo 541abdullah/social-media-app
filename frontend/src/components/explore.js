@@ -38,6 +38,9 @@ const Explore = () => {
   let commentheartobj = useRef({});
   let curview = useRef({});
 
+  //let url = "http://localhost:3001";
+  let url = "https://social-media-app-backend-final.onrender.com";
+
   const modalopener = (e) => {
 
     const piece = `^${e.target.value}.*$`;
@@ -68,7 +71,7 @@ const Explore = () => {
 
 
     async function allusergetter() {
-      const result = await fetch(`http://localhost:3001/users/getall`, {
+      const result = await fetch(`${url}/users/getall`, {
         credentials: 'include'
       })
 
@@ -87,7 +90,7 @@ const Explore = () => {
 
     async function initialtop() {
 
-      const result = await fetch(`http://localhost:3001/posts/nextten/${curuser.usrn}?skip=0`, {
+      const result = await fetch(`${url}/posts/nextten/${curuser.usrn}?skip=0`, {
         credentials: 'include',
       })
 
@@ -111,7 +114,7 @@ const Explore = () => {
 
       })
 
-      const defaultresult = await fetch(`http://localhost:3001/posts/generalgetter`, {
+      const defaultresult = await fetch(`${url}/posts/generalgetter`, {
         credentials: 'include',
       })
 
@@ -130,7 +133,7 @@ const Explore = () => {
 
   const fetchData = useCallback(async () => {
 
-    const result = await fetch(`http://localhost:3001/posts/nextten/${curuser.usrn}?skip=${skipval}`, {
+    const result = await fetch(`${url}/posts/nextten/${curuser.usrn}?skip=${skipval}`, {
       credentials: 'include',
     })
 

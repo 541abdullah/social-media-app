@@ -29,6 +29,9 @@ const Share = ({ refer }) => {
     let disp = useDispatch();
     let nav = useNavigate();
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
     useEffect(() => {
 
         setIsrequested(samplee.isrequested);
@@ -64,7 +67,7 @@ const Share = ({ refer }) => {
 
         async function initialtop() {
 
-            const result = await fetch(`http://localhost:3001/posts/nextseven/${curuser.usrn}?skip=0`, {
+            const result = await fetch(`${url}/posts/nextseven/${curuser.usrn}?skip=0`, {
                 credentials: 'include',
             })
 
@@ -120,7 +123,7 @@ const Share = ({ refer }) => {
 
     const fetchData = useCallback(async () => {
 
-        const result = await fetch(`http://localhost:3001/posts/nextseven/${curuser.usrn}?skip=${skipval}`, {
+        const result = await fetch(`${url}/posts/nextseven/${curuser.usrn}?skip=${skipval}`, {
             credentials: 'include',
         })
 
@@ -248,7 +251,7 @@ const Share = ({ refer }) => {
 
     const followtry = (each) => {
 
-        fetch(`http://localhost:3001/users/follow/${each.username}`, {
+        fetch(`${url}/users/follow/${each.username}`, {
             method: 'PUT',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ "username": curuser.usrn }),
@@ -268,7 +271,7 @@ const Share = ({ refer }) => {
 
         };
 
-        fetch(`http://localhost:3001/notif/${each.username}`, {
+        fetch(`${url}/notif/${each.username}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newnotif),
@@ -297,7 +300,7 @@ const Share = ({ refer }) => {
 
         };
 
-        fetch(`http://localhost:3001/notif/rem/${each.username}`, {
+        fetch(`${url}/notif/rem/${each.username}`, {
             method: 'DELETE',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(delnotif),
@@ -305,7 +308,7 @@ const Share = ({ refer }) => {
         })
 
 
-        fetch(`http://localhost:3001/users/followcancel/${each.username}`, {
+        fetch(`${url}/users/followcancel/${each.username}`, {
             method: 'PUT',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ "username": curuser.usrn }),
@@ -343,7 +346,7 @@ const Share = ({ refer }) => {
 
             setPostlikestate({ ...postlikestate, [key._id]: false })
 
-            fetch(`http://localhost:3001/posts/unliked/${key._id}`, {
+            fetch(`${url}/posts/unliked/${key._id}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -357,7 +360,7 @@ const Share = ({ refer }) => {
                 attachement: key.img,
             };
 
-            fetch(`http://localhost:3001/notif/rem/${key.username}`, {
+            fetch(`${url}/notif/rem/${key.username}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(delnotif),
@@ -370,7 +373,7 @@ const Share = ({ refer }) => {
             setCurlikestate(curlikestate);
             setPostlikestate({ ...postlikestate, [key._id]: true })
 
-            fetch(`http://localhost:3001/posts/liked/${key._id}`, {
+            fetch(`${url}/posts/liked/${key._id}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -389,7 +392,7 @@ const Share = ({ refer }) => {
 
             };
 
-            fetch(`http://localhost:3001/notif/${key.username}`, {
+            fetch(`${url}/notif/${key.username}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newnotif),
@@ -440,7 +443,7 @@ const Share = ({ refer }) => {
         })
 
 
-        await fetch(`http://localhost:3001/posts/addcomment/${key._id}`, {
+        await fetch(`${url}/posts/addcomment/${key._id}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newcomment),
@@ -464,7 +467,7 @@ const Share = ({ refer }) => {
 
 
 
-        await fetch(`http://localhost:3001/notif/${key.username}`, {
+        await fetch(`${url}/notif/${key.username}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newnotif),

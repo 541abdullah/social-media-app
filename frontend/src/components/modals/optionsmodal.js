@@ -32,6 +32,9 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
   let curuser = useSelector((state) => { return state.youryr.value });
   let theme = useSelector((state) => { return state.themeyr.value });
 
+  //let url = "http://localhost:3001";
+  let url = "https://social-media-app-backend-final.onrender.com";
+
   const closemodal = () => {
     trigger(false);
     if (!action.purpose == 'profile') {
@@ -66,7 +69,7 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
         setLoader(false);
         trigger(false);
         dis(loadersets(false));
-        fetch(`http://localhost:3001/logout`, {
+        fetch(`${url}/logout`, {
           credentials: 'include',
         })
         nav('/', { replace: true });
@@ -94,7 +97,7 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
 
       let deleteobj = { "username": curuser.usrn };
 
-      fetch(`http://localhost:3001/users/userdelete/${curuser.userid}`, {
+      fetch(`${url}/users/userdelete/${curuser.userid}`, {
         method: 'DELETE',
         headers: { 'content-type': "application/json" },
         body: JSON.stringify(deleteobj),
@@ -108,7 +111,7 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
 
       async function unfollower() {
 
-        await fetch(`http://localhost:3001/users/unfollow/${action.viewperson}`, {
+        await fetch(`${url}/users/unfollow/${action.viewperson}`, {
           method: 'PUT',
           headers: { 'Content-Type': "application/json" },
           body: JSON.stringify({ "username": curuser.usrn }),
@@ -141,7 +144,7 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
 
       async function blocker() {
 
-        await fetch(`http://localhost:3001/users/block/${curuser.usrn}`, {
+        await fetch(`${url}/users/block/${curuser.usrn}`, {
           method: 'PUT',
           headers: { 'Content-Type': "application/json" },
           body: JSON.stringify({ "username": action.viewperson }),
@@ -166,7 +169,7 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
 
       async function folrem() {
 
-        await fetch(`http://localhost:3001/users/removal/${curuser.usrn}`, {
+        await fetch(`${url}/users/removal/${curuser.usrn}`, {
           method: 'PUT',
           headers: { 'Content-Type': "application/json" },
           body: JSON.stringify({ "username": action.viewperson }),

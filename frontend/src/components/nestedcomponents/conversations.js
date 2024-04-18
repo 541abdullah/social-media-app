@@ -18,11 +18,14 @@ const Conversation = ({ conver, latestchat, setFromconv, fromconv }) => {
 
     let disp = useDispatch();
 
+     //let url = "http://localhost:3001";
+     let url = "https://social-media-app-backend-final.onrender.com";
+
     useEffect(() => {
 
         let friendid = conver.members?.find((fren) => fren !== curuser.userid);
 
-        fetch(`http://localhost:3001/messenger/getconvostuff/${friendid}`, {
+        fetch(`${url}/messenger/getconvostuff/${friendid}`, {
             credentials: 'include'
         }).then((res) => {
             return res.json();
@@ -42,7 +45,7 @@ const Conversation = ({ conver, latestchat, setFromconv, fromconv }) => {
 
             setNewunblocks([...newunblocks, fre.username]);
 
-            await fetch(`http://localhost:3001/users/unblock/${curuser.usrn}`, {
+            await fetch(`${url}/users/unblock/${curuser.usrn}`, {
                 method: 'PUT',
                 credentials: 'include',
                 headers: { 'Content-Type': "application/json" },

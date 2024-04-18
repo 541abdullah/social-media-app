@@ -93,6 +93,9 @@ const Messenger = () => {
 
     let disp = useDispatch();
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
     useEffect(() => {
         socket.current = io("ws://localhost:3002");
 
@@ -100,7 +103,7 @@ const Messenger = () => {
 
             if (Currentchatref.current?._id === data.converid) {
 
-                fetch('http://localhost:3001/messenger/seen/' + data.saveID, {
+                fetch(`${url}/messenger/seen/` + data.saveID, {
                     credentials: 'include'
                 }).then((res) => {
                     return res.json();
@@ -199,7 +202,7 @@ const Messenger = () => {
 
                             const receiverid = Currentchatref.current.members.find((elem) => elem !== curuser.userid);
 
-                            fetch("http://localhost:3001/messenger/ex/" + Currentchatref.current._id, {
+                            fetch(`${url}/messenger/ex/` + Currentchatref.current._id, {
                                 credentials: 'include'
                             }).then((res) => {
                                 return res.json();
@@ -219,7 +222,7 @@ const Messenger = () => {
                         }
                         else if (messagesref.current[i]?.sender !== curuser.userid) {
 
-                            fetch('http://localhost:3001/messenger/seen/' + messagesref.current[i]?._id, {
+                            fetch(`${url}/messenger/seen/` + messagesref.current[i]?._id, {
                                 credentials: 'include'
                             }).then((res) => {
                                 return res.json();
@@ -233,7 +236,7 @@ const Messenger = () => {
 
                         const receiverid = Currentchatref.current.members.find((elem) => elem !== curuser.userid);
 
-                        fetch("http://localhost:3001/messenger/ex/" + Currentchatref.current._id, {
+                        fetch(`${url}/messenger/ex/` + Currentchatref.current._id, {
                             credentials: 'include'
                         }).then((res) => {
                             return res.json();
@@ -313,7 +316,7 @@ const Messenger = () => {
 
         socket.current.on('servertextdel', (data) => {
 
-            fetch(`http://localhost:3001/messenger/ex/${data.convid}`, {
+            fetch(`${url}/messenger/ex/${data.convid}`, {
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
@@ -333,7 +336,7 @@ const Messenger = () => {
 
         socket.current.on('serverdelchange', (data) => {
 
-            fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+            fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
@@ -355,7 +358,7 @@ const Messenger = () => {
 
         socket.current.on('serveraddholder', (data) => {
 
-            fetch(`http://localhost:3001/messenger/lineupholder/${curuser.userid}`, {
+            fetch(`${url}/messenger/lineupholder/${curuser.userid}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify({ members: data.members, curchat: data.curchat }),
@@ -441,7 +444,7 @@ const Messenger = () => {
                 })
 
 
-                fetch(`http://localhost:3001/messenger/lineup/checker/${curuser.userid}`, {
+                fetch(`${url}/messenger/lineup/checker/${curuser.userid}`, {
                     credentials: 'include'
                 }).then((data) => {
                     return data.json();
@@ -456,7 +459,7 @@ const Messenger = () => {
                     }
 
 
-                    fetch(`http://localhost:3001/messenger/lineup/${curuser.userid}`, {
+                    fetch(`${url}/messenger/lineup/${curuser.userid}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobj),
@@ -473,7 +476,7 @@ const Messenger = () => {
                 async function remconv() {
 
 
-                    const response = await fetch(`http://localhost:3001/messenger/delconv/${datamain.convid}`, {
+                    const response = await fetch(`${url}/messenger/delconv/${datamain.convid}`, {
                         method: 'DELETE',
                         credentials: 'include'
                     });
@@ -490,7 +493,7 @@ const Messenger = () => {
 
                         each.receffected.map((lessereach) => {
 
-                            fetch(`http://localhost:3001/messenger/decrementer/${lessereach}`, {
+                            fetch(`${url}/messenger/decrementer/${lessereach}`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': "application/json" },
                                 body: JSON.stringify({ id: [curuser.userid], brand: each.brand, user: 'receiver' }),
@@ -551,7 +554,7 @@ const Messenger = () => {
                     let otherarray = conversationsref.current.filter((each) => !helperarray.includes(each));
                     otherarray.map((each) => {
 
-                        fetch(`http://localhost:3001/messenger/decrementer/deltype${each}`, {
+                        fetch(`${url}/messenger/decrementer/deltype${each}`, {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify({ userid: curuser.userid }),
@@ -572,7 +575,7 @@ const Messenger = () => {
 
                             each.receffected.map((lessereach) => {
 
-                                fetch(`http://localhost:3001/messenger/decrementer/${lessereach}`, {
+                                fetch(`${url}/messenger/decrementer/${lessereach}`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify({ id: [curuser.userid], brand: each.brand, user: 'receiver' }),
@@ -593,7 +596,7 @@ const Messenger = () => {
 
                 setTimeout(() => {
 
-                    fetch(`http://localhost:3001/messenger/lineup/checker/${curuser.userid}`, {
+                    fetch(`${url}/messenger/lineup/checker/${curuser.userid}`, {
                         credentials: 'include'
                     }).then((data) => {
                         return data.json();
@@ -622,7 +625,7 @@ const Messenger = () => {
                             unread: res.unread
                         }
 
-                        fetch(`http://localhost:3001/messenger/lineup/${curuser.userid}`, {
+                        fetch(`${url}/messenger/lineup/${curuser.userid}`, {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify(newobj),
@@ -656,7 +659,7 @@ const Messenger = () => {
                 if (Currentchatref.current != null) {
 
 
-                    fetch(`http://localhost:3001/messenger/ex/${Currentchatref.current._id}`, {
+                    fetch(`${url}/messenger/ex/${Currentchatref.current._id}`, {
                         credentials: 'include'
                     }).then((res) => {
                         return res.json();
@@ -671,7 +674,7 @@ const Messenger = () => {
 
                     async function newestcurconv() {
 
-                        const response = await fetch(`http://localhost:3001/messenger/alreadyconv/checker`,
+                        const response = await fetch(`${url}/messenger/alreadyconv/checker`,
                             {
                                 method: 'POST',
                                 headers: { 'Content-Type': "application/json" },
@@ -711,7 +714,7 @@ const Messenger = () => {
                 receiverId: outsiderid,
             };
 
-            fetch(`http://localhost:3001/messenger/create`, {
+            fetch(`${url}/messenger/create`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -724,7 +727,7 @@ const Messenger = () => {
                 setDraft(datae);
 
 
-                fetch(`http://localhost:3001/messenger/delconv/${datae._id}`, {
+                fetch(`${url}/messenger/delconv/${datae._id}`, {
                     method: 'DELETE',
                     credentials: 'include'
                 }).then((res) => {
@@ -762,7 +765,7 @@ const Messenger = () => {
 
                 const receiverid = Currentchatref.current.members.find((elem) => elem !== curuser.userid);
 
-                fetch(`http://localhost:3001/messenger/ex/${Currentchatref.current._id}`, {
+                fetch(`${url}/messenger/ex/${Currentchatref.current._id}`, {
                     credentials: 'include'
                 }).then((res) => {
                     return res.json();
@@ -880,7 +883,7 @@ const Messenger = () => {
         }
         else {
 
-            fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+            fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
@@ -975,7 +978,7 @@ const Messenger = () => {
 
             if (Currentchatref.current.holders.includes(curuser.userid)) {
 
-                fetch(`http://localhost:3001/messenger/lineupholder/${curuser.userid}`, {
+                fetch(`${url}/messenger/lineupholder/${curuser.userid}`, {
                     method: 'POST',
                     headers: { 'Content-Type': "application/json" },
                     body: JSON.stringify({ members: Currentchatref.current.members, curchat: Currentchatref.current._id }),
@@ -1070,7 +1073,7 @@ const Messenger = () => {
 
         async function isconv() {
 
-            const response = await fetch(`http://localhost:3001/messenger/alreadyconv/checker`,
+            const response = await fetch(`${url}/messenger/alreadyconv/checker`,
                 {
                     method: 'POST',
                     headers: { 'Content-Type': "application/json" },
@@ -1081,7 +1084,7 @@ const Messenger = () => {
 
             const verdict = await response.json();
 
-            fetch(`http://localhost:3001/messenger/holderedit/${curuser.userid}`, {
+            fetch(`${url}/messenger/holderedit/${curuser.userid}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify({ members: Currentchatref.current.members, curchat: Currentchatref.current._id }),
@@ -1106,7 +1109,7 @@ const Messenger = () => {
 
                         if (conversationsref.current[i]?._id !== Currentchatref.current._id) {
 
-                            fetch(`http://localhost:3001/messenger/incrementer/${conversationsref.current[i]._id}`, {
+                            fetch(`${url}/messenger/incrementer/${conversationsref.current[i]._id}`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': "application/json" },
                                 body: JSON.stringify({ id: curuser.userid, brand: newbrand, new: true, user: 'curuser', comparerval: null }),
@@ -1142,7 +1145,7 @@ const Messenger = () => {
                     receiverId: recid
                 };
 
-                fetch(`http://localhost:3001/messenger/create`, {
+                fetch(`${url}/messenger/create`, {
                     method: 'POST',
                     headers: { 'Content-Type': "application/json" },
                     body: JSON.stringify(newobj),
@@ -1176,7 +1179,7 @@ const Messenger = () => {
 
                     let receivereffected;
 
-                    fetch(`http://localhost:3001/messenger/lineup/checker/${receiverid}`, {
+                    fetch(`${url}/messenger/lineup/checker/${receiverid}`, {
                         credentials: 'include'
                     }).then((res) => {
                         return res.json();
@@ -1194,7 +1197,7 @@ const Messenger = () => {
                                     unread: { [Currentchatref.current._id]: true, necessary: false }
                                 }
 
-                                fetch(`http://localhost:3001/messenger/lineup/create`, {
+                                fetch(`${url}/messenger/lineup/create`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newobj),
@@ -1218,7 +1221,7 @@ const Messenger = () => {
                                         receffected: receivereffected
                                     };
 
-                                    fetch('http://localhost:3001/messenger/send', {
+                                    fetch(`${url}/messenger/send`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
                                         body: JSON.stringify(newmsg),
@@ -1282,7 +1285,7 @@ const Messenger = () => {
                                     unread: { [Currentchatref.current._id]: true, necessary: false }
                                 }
 
-                                fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                                fetch(`${url}/messenger/lineup/${receiverid}`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newobj),
@@ -1306,7 +1309,7 @@ const Messenger = () => {
                                         receffected: receivereffected
                                     };
 
-                                    fetch('http://localhost:3001/messenger/send', {
+                                    fetch(`${url}/messenger/send`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
                                         body: JSON.stringify(newmsg),
@@ -1393,7 +1396,7 @@ const Messenger = () => {
                                 }
 
 
-                                fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                                fetch(`${url}/messenger/lineup/${receiverid}`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newobj),
@@ -1408,7 +1411,7 @@ const Messenger = () => {
 
                                         if (data.lineup[i]._id != Currentchatref.current._id) {
 
-                                            fetch(`http://localhost:3001/messenger/incrementer/${data.lineup[i]._id}`, {
+                                            fetch(`${url}/messenger/incrementer/${data.lineup[i]._id}`, {
                                                 method: 'POST',
                                                 headers: { 'Content-Type': "application/json" },
                                                 body: JSON.stringify({ id: receiverid, brand: newbrand, new: true, user: 'receiver', comparerval: null }),
@@ -1441,7 +1444,7 @@ const Messenger = () => {
                                         receffected: receivereffected
                                     };
 
-                                    fetch('http://localhost:3001/messenger/send', {
+                                    fetch(`${url}/messenger/send`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
                                         body: JSON.stringify(newmsg),
@@ -1514,7 +1517,7 @@ const Messenger = () => {
                                 if (conversationsref.current[i]._id !== Currentchatref.current._id && conversationsref.current[i] != undefined) {
 
 
-                                    fetch(`http://localhost:3001/messenger/incrementer/${conversationsref.current[i]._id}`, {
+                                    fetch(`${url}/messenger/incrementer/${conversationsref.current[i]._id}`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
                                         body: JSON.stringify({ id: curuser.userid, brand: newbrand, new: false, user: 'curuser', comparerval: lastidx }),
@@ -1563,7 +1566,7 @@ const Messenger = () => {
                     let receivereffected = [];
 
 
-                    fetch(`http://localhost:3001/messenger/lineup/checker/${receiverid}`, {
+                    fetch(`${url}/messenger/lineup/checker/${receiverid}`, {
                         credentials: 'include'
                     }).then((res) => {
                         return res.json();
@@ -1624,7 +1627,7 @@ const Messenger = () => {
                             }
 
 
-                            fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                            fetch(`${url}/messenger/lineup/${receiverid}`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': "application/json" },
                                 body: JSON.stringify(newobj),
@@ -1636,7 +1639,7 @@ const Messenger = () => {
 
                                     let lastidxrec;
 
-                                    const response = await fetch(`http://localhost:3001/messenger/findmytextsifany/${receiverid}`,
+                                    const response = await fetch(`${url}/messenger/findmytextsifany/${receiverid}`,
 
                                         {
                                             method: 'POST',
@@ -1661,7 +1664,7 @@ const Messenger = () => {
 
                                             if (data.lineup[i]._id != Currentchatref.current._id) {
 
-                                                fetch(`http://localhost:3001/messenger/incrementer/${data.lineup[i]._id}`, {
+                                                fetch(`${url}/messenger/incrementer/${data.lineup[i]._id}`, {
                                                     method: 'POST',
                                                     headers: { 'Content-Type': "application/json" },
                                                     body: JSON.stringify({ id: receiverid, brand: newbrand, new: false, user: 'receiver', comparerval: lastidxrec }),
@@ -1704,7 +1707,7 @@ const Messenger = () => {
 
                                 };
 
-                                fetch('http://localhost:3001/messenger/send', {
+                                fetch(`${url}/messenger/send`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newmsg),
@@ -1779,7 +1782,7 @@ const Messenger = () => {
 
                             if (conversationsref.current[i]._id !== Currentchatref.current._id && conversationsref.current[i] != undefined) {
 
-                                fetch(`http://localhost:3001/messenger/incrementer/${conversationsref.current[i]._id}`, {
+                                fetch(`${url}/messenger/incrementer/${conversationsref.current[i]._id}`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newobj),
@@ -1841,7 +1844,7 @@ const Messenger = () => {
 
                     let receivereffected = [];
 
-                    fetch(`http://localhost:3001/messenger/lineup/checker/${receiverid}`, {
+                    fetch(`${url}/messenger/lineup/checker/${receiverid}`, {
                         credentials: 'include'
                     }).then((res) => {
                         return res.json();
@@ -1859,7 +1862,7 @@ const Messenger = () => {
                                     unread: { [Currentchatref.current._id]: true, necessary: false }
                                 }
 
-                                fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                                fetch(`${url}/messenger/lineup/${receiverid}`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newobj),
@@ -1884,7 +1887,7 @@ const Messenger = () => {
 
                                     };
 
-                                    fetch('http://localhost:3001/messenger/send', {
+                                    fetch(`${url}/messenger/send`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
                                         body: JSON.stringify(newmsg),
@@ -2005,7 +2008,7 @@ const Messenger = () => {
                                 }
 
 
-                                fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                                fetch(`${url}/messenger/lineup/${receiverid}`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
                                     body: JSON.stringify(newobj),
@@ -2020,7 +2023,7 @@ const Messenger = () => {
 
                                             let lastidxrec;
 
-                                            const response = await fetch(`http://localhost:3001/messenger/findmytextsifany/${receiverid}`,
+                                            const response = await fetch(`${url}/messenger/findmytextsifany/${receiverid}`,
 
                                                 {
                                                     method: 'POST',
@@ -2036,7 +2039,7 @@ const Messenger = () => {
 
                                                 if (data.lineup[i]._id != Currentchatref.current._id) {
 
-                                                    fetch(`http://localhost:3001/messenger/incrementer/${data.lineup[i]._id}`, {
+                                                    fetch(`${url}/messenger/incrementer/${data.lineup[i]._id}`, {
                                                         method: 'POST',
                                                         headers: { 'Content-Type': "application/json" },
                                                         body: JSON.stringify({ id: receiverid, brand: newbrand, new: false, user: 'receiver', comparerval: lastidxrec }),
@@ -2071,7 +2074,7 @@ const Messenger = () => {
                                             if (data.lineup[i] != undefined) {
                                                 if (data.lineup[i]._id != Currentchatref.current._id) {
 
-                                                    fetch(`http://localhost:3001/messenger/incrementer/${data.lineup[i]._id}`, {
+                                                    fetch(`${url}/messenger/incrementer/${data.lineup[i]._id}`, {
                                                         method: 'POST',
                                                         headers: { 'Content-Type': "application/json" },
                                                         body: JSON.stringify({ id: receiverid, brand: newbrand, new: true, user: 'receiver', comparerval: null }),
@@ -2111,7 +2114,7 @@ const Messenger = () => {
 
                                     };
 
-                                    fetch('http://localhost:3001/messenger/send', {
+                                    fetch(`${url}/messenger/send`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
                                         body: JSON.stringify(newmsg),
@@ -2209,7 +2212,7 @@ const Messenger = () => {
 
         async function deleter() {
 
-            const response = await fetch(`http://localhost:3001/messenger/findatleastone/${curuser.userid}`, {
+            const response = await fetch(`${url}/messenger/findatleastone/${curuser.userid}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify({ convid: conv }),
@@ -2228,19 +2231,19 @@ const Messenger = () => {
 
 
                 let iterable = [
-                    fetch(`http://localhost:3001/messenger/conv/remover/${curuser.userid}`, {
+                    fetch(`${url}/messenger/conv/remover/${curuser.userid}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobj),
                         credentials: 'include'
                     }),
-                    fetch(`http://localhost:3001/messenger/conv/remover/${receiverid}`, {
+                    fetch(`${url}/messenger/conv/remover/${receiverid}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobjtwo),
                         credentials: 'include'
                     }),
-                    fetch(`http://localhost:3001/messenger/convholder/remover`, {
+                    fetch(`${url}/messenger/convholder/remover`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify({ userid: curuser.userid, convid: conv }),
@@ -2252,7 +2255,7 @@ const Messenger = () => {
                 Promise.all(iterable
                 ).then((result) => {
 
-                    fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+                    fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                         credentials: 'include'
                     }).then((res) => {
                         return res.json();
@@ -2286,19 +2289,19 @@ const Messenger = () => {
 
 
                 let iterable = [
-                    fetch(`http://localhost:3001/messenger/conv/remover/${curuser.userid}`, {
+                    fetch(`${url}/messenger/conv/remover/${curuser.userid}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobj),
                         credentials: 'include'
                     }),
-                    fetch(`http://localhost:3001/messenger/conv/remover/${receiverid}`, {
+                    fetch(`${url}/messenger/conv/remover/${receiverid}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobjtwo),
                         credentials: 'include'
                     }),
-                    fetch(`http://localhost:3001/messenger/convholder/remover`, {
+                    fetch(`${url}/messenger/convholder/remover`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify({ userid: curuser.userid, convid: conv }),
@@ -2310,7 +2313,7 @@ const Messenger = () => {
                 Promise.all(iterable
                 ).then((result) => {
 
-                    fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+                    fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                         credentials: 'include'
                     }).then((res) => {
                         return res.json();
@@ -2322,7 +2325,7 @@ const Messenger = () => {
                             setLatestchat(data.convs.unread);
                         }
 
-                        fetch(`http://localhost:3001/messenger/lineup/checker/${curuser.userid}`, {
+                        fetch(`${url}/messenger/lineup/checker/${curuser.userid}`, {
                             credentials: 'include'
                         }).then((res) => {
                             return res.json();
@@ -2332,7 +2335,7 @@ const Messenger = () => {
                             for (let i = nevermessages.length - 1; i >= 0; i--) {
                                 if (nevermessages[i].status == false) {
 
-                                    fetch(`http://localhost:3001/messenger/delete/${nevermessages[i]._id}`, {
+                                    fetch(`${url}/messenger/delete/${nevermessages[i]._id}`, {
                                         method: 'DELETE',
                                         credentials: 'include'
                                     }).then((res) => {
@@ -2359,7 +2362,7 @@ const Messenger = () => {
 
                                     each.effected.map((lessereach) => {
 
-                                        fetch(`http://localhost:3001/messenger/decrementer/${lessereach}`, {
+                                        fetch(`${url}/messenger/decrementer/${lessereach}`, {
                                             method: 'POST',
                                             headers: { 'Content-Type': "application/json" },
                                             body: JSON.stringify({ id: [curuser.userid, receiverid], brand: each.brand, user: 'curuser' }),
@@ -2381,7 +2384,7 @@ const Messenger = () => {
 
                                     each.receffected.map((lessereach) => {
 
-                                        fetch(`http://localhost:3001/messenger/decrementer/${lessereach}`, {
+                                        fetch(`${url}/messenger/decrementer/${lessereach}`, {
                                             method: 'POST',
                                             headers: { 'Content-Type': "application/json" },
                                             body: JSON.stringify({ id: [curuser.userid, receiverid], brand: each.brand, user: 'receiver' }),
@@ -2416,7 +2419,7 @@ const Messenger = () => {
                         let curchat = Currentchatref.current._id;
                         setTimeout(() => {
 
-                            fetch(`http://localhost:3001/messenger/convdel/reorder/${receiverid}`, {
+                            fetch(`${url}/messenger/convdel/reorder/${receiverid}`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': "application/json" },
                                 body: JSON.stringify({ converid: conv }),
@@ -2477,7 +2480,7 @@ const Messenger = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+        fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
             credentials: 'include'
         }).then((res) => {
             return res.json();
@@ -2506,7 +2509,7 @@ const Messenger = () => {
 
         setTimeout(() => {
 
-            fetch(`http://localhost:3001/messenger/lineup/checker/${curuser.userid}`, {
+            fetch(`${url}/messenger/lineup/checker/${curuser.userid}`, {
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
@@ -2519,7 +2522,7 @@ const Messenger = () => {
                         lineup: conversationsref.current,
                         unread: { necessary: false }
                     }
-                    fetch(`http://localhost:3001/messenger/lineup/create`, {
+                    fetch(`${url}/messenger/lineup/create`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobj),
@@ -2555,7 +2558,7 @@ const Messenger = () => {
                         }
                     }
 
-                    fetch(`http://localhost:3001/messenger/lineup/${curuser.userid}`, {
+                    fetch(`${url}/messenger/lineup/${curuser.userid}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify(newobj),
@@ -2584,7 +2587,7 @@ const Messenger = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:3001/messenger', {
+        fetch(`${url}/messenger`, {
             credentials: 'include'
         }).then((res) => {
             return res.json();
@@ -2610,7 +2613,7 @@ const Messenger = () => {
 
         if (Currentchat != null) {
 
-            fetch(`http://localhost:3001/messenger/ex/${Currentchat._id}`, {
+            fetch(`${url}/messenger/ex/${Currentchat._id}`, {
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
@@ -2639,7 +2642,7 @@ const Messenger = () => {
                             break;
                         }
                         else if (bitexts[i]?.sender !== curuser.userid) {
-                            fetch('http://localhost:3001/messenger/seen/' + bitexts[i]?._id, {
+                            fetch(`${url}/messenger/seen/` + bitexts[i]?._id, {
                                 credentials: 'include'
                             }).then((res) => {
                                 return res.json();
@@ -2675,7 +2678,7 @@ const Messenger = () => {
                 identID = Currentchat.members[0];
             }
 
-            fetch(`http://localhost:3001/messenger/getconvostuff/${identID}`, {
+            fetch(`${url}/messenger/getconvostuff/${identID}`, {
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
@@ -2809,7 +2812,7 @@ const Messenger = () => {
 
                 let inheritvals = async () => {
 
-                    const response = await fetch(`http://localhost:3001/messenger/inheritance`,
+                    const response = await fetch(`${url}/messenger/inheritance`,
                         {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
@@ -2855,7 +2858,7 @@ const Messenger = () => {
 
 
 
-                fetch(`http://localhost:3001/messenger/lineup/checker/${receiverid}`, {
+                fetch(`${url}/messenger/lineup/checker/${receiverid}`, {
                     credentials: 'include'
                 }).then((res) => {
                     return res.json();
@@ -2907,7 +2910,7 @@ const Messenger = () => {
                             unread: data.unread
                         };
 
-                        fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                        fetch(`${url}/messenger/lineup/${receiverid}`, {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify(newobj),
@@ -2928,7 +2931,7 @@ const Messenger = () => {
                         otherarray.map((each) => {
 
                             twicedecrement.unshift(
-                                fetch(`http://localhost:3001/messenger/decrementer/deltype${each}`,
+                                fetch(`${url}/messenger/decrementer/deltype${each}`,
                                     {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
@@ -2953,7 +2956,7 @@ const Messenger = () => {
                             unread: data.unread
                         };
 
-                        fetch(`http://localhost:3001/messenger/lineup/${receiverid}`, {
+                        fetch(`${url}/messenger/lineup/${receiverid}`, {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify(newobj),
@@ -2977,7 +2980,7 @@ const Messenger = () => {
                     textdets.msg.receffected.map((each) => {
 
                         twicedecrement.unshift(
-                            fetch(`http://localhost:3001/messenger/decrementer/${each}`,
+                            fetch(`${url}/messenger/decrementer/${each}`,
                                 {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },
@@ -2999,7 +3002,7 @@ const Messenger = () => {
                     console.log(err);
                 });
 
-                fetch(`http://localhost:3001/messenger/lineup/checker/${curuser.userid}`, {
+                fetch(`${url}/messenger/lineup/checker/${curuser.userid}`, {
                     credentials: 'include'
                 }).then((res) => {
                     return res.json();
@@ -3054,7 +3057,7 @@ const Messenger = () => {
                             unread: data.unread
                         };
 
-                        fetch(`http://localhost:3001/messenger/lineup/${curuser.userid}`, {
+                        fetch(`${url}/messenger/lineup/${curuser.userid}`, {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify(newobj),
@@ -3063,7 +3066,7 @@ const Messenger = () => {
                             return res.json();
                         }).then((data) => {
 
-                            fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+                            fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                                 credentials: 'include'
                             }).then((res) => {
                                 return res.json();
@@ -3086,7 +3089,7 @@ const Messenger = () => {
                         otherarray.map((each) => {
 
                             twicedecrement.unshift(
-                                fetch(`http://localhost:3001/messenger/decrementer/deltype${each}`,
+                                fetch(`${url}/messenger/decrementer/deltype${each}`,
                                     {
                                         method: 'POST',
                                         headers: { 'Content-Type': "application/json" },
@@ -3127,7 +3130,7 @@ const Messenger = () => {
                         };
 
 
-                        fetch(`http://localhost:3001/messenger/lineup/${curuser.userid}`, {
+                        fetch(`${url}/messenger/lineup/${curuser.userid}`, {
                             method: 'POST',
                             headers: { 'Content-Type': "application/json" },
                             body: JSON.stringify(newobj),
@@ -3136,7 +3139,7 @@ const Messenger = () => {
                             return res.json();
                         }).then((data) => {
 
-                            fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+                            fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                                 credentials: 'include'
                             }).then((res) => {
                                 return res.json();
@@ -3159,7 +3162,7 @@ const Messenger = () => {
                     textdets.msg.effected.map((each) => {
 
                         twicedecrement.unshift(
-                            fetch(`http://localhost:3001/messenger/decrementer/${each}`,
+                            fetch(`${url}/messenger/decrementer/${each}`,
                                 {
                                     method: 'POST',
                                     headers: { 'Content-Type': "application/json" },

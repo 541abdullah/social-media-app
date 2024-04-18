@@ -25,6 +25,9 @@ const Sidepain = () => {
     let disp=useDispatch();
     let nav = useNavigate();
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
 
     useEffect(()=>{
 
@@ -36,7 +39,7 @@ const Sidepain = () => {
 
     const followtry = (each) => {
 
-        fetch(`http://localhost:3001/users/follow/${each.usr}`,{
+        fetch(`${url}/users/follow/${each.usr}`,{
             method: 'PUT',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ "username": curuser.usrn }),
@@ -55,7 +58,7 @@ const Sidepain = () => {
 
         };
 
-        fetch(`http://localhost:3001/notif/${each.usr}`, {
+        fetch(`${url}/notif/${each.usr}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newnotif),
@@ -82,7 +85,7 @@ const Sidepain = () => {
             
         };
 
-        fetch(`http://localhost:3001/notif/rem/${each.usr}`, {
+        fetch(`${url}/notif/rem/${each.usr}`, {
             method: 'DELETE',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(delnotif),
@@ -90,7 +93,7 @@ const Sidepain = () => {
         })
 
 
-        fetch(`http://localhost:3001/users/followcancel/${each.usr}`, {
+        fetch(`${url}/users/followcancel/${each.usr}`, {
             method: 'PUT',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({"username":curuser.usrn}),
@@ -106,7 +109,7 @@ const Sidepain = () => {
 
         async function randomsuggest() {
 
-            const result = await fetch(`http://localhost:3001/users/getall`, {
+            const result = await fetch(`${url}/users/getall`, {
               credentials: 'include',
             })
             

@@ -29,6 +29,9 @@ const Yesnomodal = ({ trigger, text, bold, extra }) => {
   let nav = useNavigate();
   const disp = useDispatch();
 
+   //let url = "http://localhost:3001";
+   let url = "https://social-media-app-backend-final.onrender.com";
+
   const closemodal = () => {
 
     if (extra.purpose == "logger") {
@@ -57,7 +60,7 @@ const Yesnomodal = ({ trigger, text, bold, extra }) => {
     if (extra.purpose == "cancelreq") {
 
 
-      fetch(`http://localhost:3001/users/followcancel/${extra.viewperson}`, {
+      fetch(`${url}/users/followcancel/${extra.viewperson}`, {
         method: 'PUT',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify({ "username": extra.curuser.usrn }),
@@ -75,7 +78,7 @@ const Yesnomodal = ({ trigger, text, bold, extra }) => {
 
       };
 
-      fetch(`http://localhost:3001/notif/rem/${extra.viewperson}`, {
+      fetch(`${url}/notif/rem/${extra.viewperson}`, {
         method: 'DELETE',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(delnotif),
@@ -90,14 +93,14 @@ const Yesnomodal = ({ trigger, text, bold, extra }) => {
         username: extra.curuser.usrn
       }
 
-      fetch(`http://localhost:3001/posts/delete/${extra.thepost._id}`, {
+      fetch(`${url}/posts/delete/${extra.thepost._id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(newobj),
         credentials: 'include'
       })
 
-      fetch(`http://localhost:3001/notif/postdel/${extra.thepost._id}`, {
+      fetch(`${url}/notif/postdel/${extra.thepost._id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify({ name: 'user' }),
@@ -120,7 +123,7 @@ const Yesnomodal = ({ trigger, text, bold, extra }) => {
         setLoader(false);
         trigger(false);
 
-        fetch(`http://localhost:3001/logout`, {
+        fetch(`${url}/logout`, {
           credentials: 'include',
         })
 

@@ -31,6 +31,8 @@ const Signup = () => {
     let delaypass = null;
     let delayid = null;
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
 
     let preventer = (e) => {
 
@@ -38,7 +40,7 @@ const Signup = () => {
         let sformdata = document.querySelector('.sform');
         let data = new FormData(sformdata);
 
-        fetch('http://localhost:3001/signup', {
+        fetch(`${url}/signup`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
@@ -68,7 +70,7 @@ const Signup = () => {
             setInvusr(true);
             setUserdisplayer(true);
 
-            fetch("http://localhost:3001/takenusername/" + delayusr, {
+            fetch(`${url}/takenusername/` + delayusr, {
                 credentials: 'include'
             }
             ).then((res) => {
@@ -121,7 +123,7 @@ const Signup = () => {
         if (/[^@]+@[^@]+\.[^@]+/.test(delayid)) {
             setEmaildisplayer(true);
             setEmail(true);
-            fetch("http://localhost:3001/takenemail/" + delayid
+            fetch(`${url}/takenemail/` + delayid
             ).then((res) => {
                 return res.json();
             }).then((data) => {

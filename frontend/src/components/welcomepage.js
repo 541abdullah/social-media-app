@@ -38,13 +38,17 @@ const Welcome = () => {
     let disp = useDispatch();
 
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
+
 
 
     useEffect(() => {
 
         async function welcomer() {
 
-            const result = await fetch('http://localhost:3001/welcome', {
+            const result = await fetch(`${url}/welcome`, {
                 credentials: 'include'
             })
 
@@ -116,7 +120,7 @@ const Welcome = () => {
             if (usr != null) {
 
 
-                fetch('http://localhost:3001/stories', {
+                fetch(`${url}/stories`, {
                     method: 'POST',
                     headers: { 'Content-Type': "application/json" },
                     body: JSON.stringify({ "username": usr }),
@@ -160,7 +164,7 @@ const Welcome = () => {
                         for (let i = 1; i < trimarr.length; i++) {
 
 
-                            const result = await fetch(`http://localhost:3001/colorchecker/${trimarr[i][1]}`, {
+                            const result = await fetch(`${url}/colorchecker/${trimarr[i][1]}`, {
                                 method: 'POST',
                                 credentials: 'include',
                                 headers: { 'Content-Type': 'application/json' },
@@ -293,7 +297,7 @@ const Welcome = () => {
 
 
     let storysetter = (selectionarr) => {
-        fetch('http://localhost:3001/newstory', {
+        fetch(`${url}/newstory`, {
             method: 'POST',
             credentials: 'include',
             headers: { 'Content-Type': 'application/json' },

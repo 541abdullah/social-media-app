@@ -24,6 +24,9 @@ const Chatabyss = ({ onechat, own, ident, status, id, rec, pfpobj, finalseen, me
 
     }
 
+     //let url = "http://localhost:3001";
+     let url = "https://social-media-app-backend-final.onrender.com";
+
     let redzone = (id) => {
 
         setRedselector((prev) => {
@@ -50,14 +53,14 @@ const Chatabyss = ({ onechat, own, ident, status, id, rec, pfpobj, finalseen, me
                 isLast = true;
             }
 
-            fetch(`http://localhost:3001/messenger/delete/${text[0]._id}`, {
+            fetch(`${url}/messenger/delete/${text[0]._id}`, {
                 method: 'DELETE',
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
             }).then((data) => {
 
-                fetch(`http://localhost:3001/messenger/ex/${Currentchat._id}`, {
+                fetch(`${url}/messenger/ex/${Currentchat._id}`, {
                     credentials: 'include'
                 }).then((res) => {
                     return res.json();
@@ -100,14 +103,14 @@ const Chatabyss = ({ onechat, own, ident, status, id, rec, pfpobj, finalseen, me
 
             }
 
-            fetch(`http://localhost:3001/messenger/delete/${text._id}`, {
+            fetch(`${url}/messenger/delete/${text._id}`, {
                 method: 'DELETE',
                 credentials: 'include'
             }).then((res) => {
                 return res.json();
             }).then((data) => {
 
-                fetch(`http://localhost:3001/messenger/ex/${Currentchat._id}`, {
+                fetch(`${url}/messenger/ex/${Currentchat._id}`, {
                     credentials: 'include'
                 }).then((res) => {
                     return res.json();

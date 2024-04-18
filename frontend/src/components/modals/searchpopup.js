@@ -19,6 +19,8 @@ const Searchpopup = ({ open, slice }) => {
 
     }
 
+    
+
     return ReactDom.createPortal(
         <>
 

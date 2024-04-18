@@ -26,6 +26,9 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
     let [openyesno, setOpenyesno] = useState(false);
     let [delsuccess, setDelsuccess] = useState(false);
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
     let commentobj = {};
 
     data.comments.map((each) => {
@@ -122,7 +125,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
 
             setCurlikestate(curlikestate + 1);
 
-            fetch(`http://localhost:3001/posts/liked/${data._id}`, {
+            fetch(`${url}/posts/liked/${data._id}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -141,7 +144,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
 
             };
 
-            fetch(`http://localhost:3001/notif/${data.username}`, {
+            fetch(`${url}/notif/${data.username}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newnotif),
@@ -184,7 +187,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
 
             setCurlikestate(curlikestate - 1);
 
-            fetch(`http://localhost:3001/posts/unliked/${data._id}`, {
+            fetch(`${url}/posts/unliked/${data._id}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -198,7 +201,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
                 attachement: data.img,
             };
 
-            fetch(`http://localhost:3001/notif/rem/${data.username}`, {
+            fetch(`${url}/notif/rem/${data.username}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(delnotif),
@@ -265,7 +268,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
 
             }
 
-            fetch(`http://localhost:3001/posts/commentunlike/${data._id}`, {
+            fetch(`${url}/posts/commentunlike/${data._id}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -280,7 +283,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
                 commentifany: key.thecomment
             };
 
-            fetch(`http://localhost:3001/notif/rem/${key.username}`, {
+            fetch(`${url}/notif/rem/${key.username}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(delnotif),
@@ -314,7 +317,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
 
             }
 
-            fetch(`http://localhost:3001/posts/commentlike/${data._id}`, {
+            fetch(`${url}/posts/commentlike/${data._id}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newobj),
@@ -332,7 +335,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
                 reference: data._id
             };
 
-            fetch(`http://localhost:3001/notif/${key.username}`, {
+            fetch(`${url}/notif/${key.username}`, {
                 method: 'POST',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify(newnotif),
@@ -398,7 +401,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
 
         }
 
-        await fetch(`http://localhost:3001/posts/addcomment/${data._id}`, {
+        await fetch(`${url}/posts/addcomment/${data._id}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newcomment),
@@ -416,7 +419,7 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
             reference: data._id
         }
 
-        await fetch(`http://localhost:3001/notif/${data.username}`, {
+        await fetch(`${url}/notif/${data.username}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newnotif),

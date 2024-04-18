@@ -17,9 +17,12 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
 
   let selref = useRef(false);
 
+  //let url = "http://localhost:3001";
+  let url = "https://social-media-app-backend-final.onrender.com";
+
   useEffect(() => {
 
-    fetch(`http://localhost:3001/messenger/getfren/${curuser.userid}`, {
+    fetch(`${url}/messenger/getfren/${curuser.userid}`, {
       credentials: 'include'
     }).then((res) => {
       return res.json();
@@ -45,7 +48,7 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
 
     let checkifconvo = [curuser.userid, outsider.data];
 
-    fetch(`http://localhost:3001/messenger/alreadyconv/checker`, {
+    fetch(`${url}/messenger/alreadyconv/checker`, {
       method: 'POST',
       headers: { 'Content-Type': "application/json" },
       body: JSON.stringify(checkifconvo),
@@ -64,7 +67,7 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
           receiverId: outsider.data
         };
 
-        fetch(`http://localhost:3001/messenger/create`, {
+        fetch(`${url}/messenger/create`, {
           method: 'POST',
           headers: { 'Content-Type': "application/json" },
           body: JSON.stringify(newobj),
@@ -77,7 +80,7 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
 
           setDraft(datae);
 
-          fetch(`http://localhost:3001/messenger/delconv/${datae._id}`, {
+          fetch(`${url}/messenger/delconv/${datae._id}`, {
             method: 'DELETE',
             credentials: 'include'
           }).then((res) => {
@@ -115,7 +118,7 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
 
       let checkifconvo = [curuser.userid, o._id];
 
-      fetch(`http://localhost:3001/messenger/alreadyconv/checker`, {
+      fetch(`${url}/messenger/alreadyconv/checker`, {
         method: 'POST',
         headers: { 'Content-Type': "application/json" },
         body: JSON.stringify(checkifconvo),
@@ -154,7 +157,7 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
       receiverId: o._id
     };
 
-    fetch(`http://localhost:3001/messenger/create`, {
+    fetch(`${url}/messenger/create`, {
       method: 'POST',
       headers: { 'Content-Type': "application/json" },
       body: JSON.stringify(newobj),
@@ -167,7 +170,7 @@ const Onlinechatters = ({ onl, setCurrentchat, Currentchat, setDraft, draft, out
       setDraft(datae);
 
 
-      fetch(`http://localhost:3001/messenger/delconv/${datae._id}`, {
+      fetch(`${url}/messenger/delconv/${datae._id}`, {
         method: 'DELETE',
         credentials: 'include'
       }).then((res) => {

@@ -24,6 +24,9 @@ const Newstory = () => {
 
     let collection = JSON.parse(JSON.stringify(collectionmain));
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
     const current = [];
     if (!onetimeref.current) {
 
@@ -209,7 +212,7 @@ const Newstory = () => {
                     return false;
                 }
 
-                return fetch(`http://localhost:3001/story/isthere/${each.frameimg}`, {
+                return fetch(`${url}/story/isthere/${each.frameimg}`, {
                     method: 'POST',
                     headers: { 'Content-Type': "application/json" },
                     body: JSON.stringify({ "username": newcurrentref.current[1].name }),
@@ -291,7 +294,7 @@ const Newstory = () => {
 
             async function viewsgetter() {
 
-                const result = await fetch(`http://localhost:3001/story/myviews/${currentref.current[1].name}`, {
+                const result = await fetch(`${url}/story/myviews/${currentref.current[1].name}`, {
                     credentials: 'include'
                 })
 
@@ -310,7 +313,7 @@ const Newstory = () => {
 
                 if (currentref.current[1].name != curuser.usrn) {
 
-                    fetch(`http://localhost:3001/story/viewed/${currentref.current[1].name}`, {
+                    fetch(`${url}/story/viewed/${currentref.current[1].name}`, {
                         method: 'POST',
                         headers: { 'Content-Type': "application/json" },
                         body: JSON.stringify({ "username": curuser.usrn }),
@@ -483,7 +486,7 @@ const Newstory = () => {
         }, 5000);
 
 
-        fetch(`http://localhost:3001/story/liked/${currentref.current[1].name}`, {
+        fetch(`${url}/story/liked/${currentref.current[1].name}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ "username": curuser.usrn }),
@@ -501,7 +504,7 @@ const Newstory = () => {
             reference: null
         };
 
-        fetch(`http://localhost:3001/notif/${currentref.current[1].name}`, {
+        fetch(`${url}/notif/${currentref.current[1].name}`, {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify(newnotif),
@@ -534,7 +537,7 @@ const Newstory = () => {
 
         if (storydeletion) {
 
-            fetch(`http://localhost:3001/story/deletion/${curuser.usrn}`, {
+            fetch(`${url}/story/deletion/${curuser.usrn}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': "application/json" },
                 body: JSON.stringify({ justdel: maindefinedref.current.peek().frameimg }),

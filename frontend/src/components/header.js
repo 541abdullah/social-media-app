@@ -26,13 +26,16 @@ const Header = ({ caller, extra }) => {
     let nav = useNavigate();
     let disp = useDispatch();
 
+    //let url = "http://localhost:3001";
+    let url = "https://social-media-app-backend-final.onrender.com";
+
 
     useEffect(() => {
 
         async function newchats() {
 
 
-            const result = await fetch(`http://localhost:3001/messenger/lineup/order/${curuser.userid}`, {
+            const result = await fetch(`${url}/messenger/lineup/order/${curuser.userid}`, {
                 credentials: 'include'
             });
 
