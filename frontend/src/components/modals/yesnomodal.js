@@ -29,8 +29,8 @@ const Yesnomodal = ({ trigger, text, bold, extra }) => {
   let nav = useNavigate();
   const disp = useDispatch();
 
-   //let url = "http://localhost:3001";
-   let url = "https://social-media-app-backend-final.onrender.com";
+   let url = "http://localhost:3001";
+   //let url = "https://social-media-app-backend-final.onrender.com";
 
   const closemodal = () => {
 

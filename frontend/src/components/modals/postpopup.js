@@ -26,8 +26,8 @@ const Postpopup = ({ hider, trigger, data, comheartobj, type, extra }) => {
     let [openyesno, setOpenyesno] = useState(false);
     let [delsuccess, setDelsuccess] = useState(false);
 
-    //let url = "http://localhost:3001";
-    let url = "https://social-media-app-backend-final.onrender.com";
+    let url = "http://localhost:3001";
+    //let url = "https://social-media-app-backend-final.onrender.com";
 
     let commentobj = {};
 

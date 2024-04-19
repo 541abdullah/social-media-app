@@ -67,8 +67,8 @@ const Leftpain = ({ parent }) => {
   let lastloaderolder = useRef(1);
   let firsttime = useRef(false);
 
-  //let url = "http://localhost:3001";
-  let url = "https://social-media-app-backend-final.onrender.com";
+  let url = "http://localhost:3001";
+  //let url = "https://social-media-app-backend-final.onrender.com";
 
 
   if (ismessagesclicked) {

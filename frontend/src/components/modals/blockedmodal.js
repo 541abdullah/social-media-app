@@ -10,8 +10,8 @@ const Blockedmodal = ({ text, doer, other, extra }) => {
   let curuser = useSelector((state) => { return state.youryr.value });
   let [loader, setLoader] = useState(false);
 
-  //let url = "http://localhost:3001";
-  let url = "https://social-media-app-backend-final.onrender.com";
+  let url = "http://localhost:3001";
+  //let url = "https://social-media-app-backend-final.onrender.com";
 
   const unblocker = () => {
 

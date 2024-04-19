@@ -12,6 +12,7 @@ let jwt = require('jsonwebtoken');
 let secret = '2eiuoh23n@%dcoe99wekd-$';
 let helmet = require('helmet');
 let dotenv = require('dotenv');
+let path = require('path');
 
 
 "use client";
@@ -82,6 +83,16 @@ app.use("/posts", postRoute);
 app.use("/story", storyRoute);
 app.use("/notif", notifRoute);
 app.use("/detschange", detschangeRoute);
+
+
+
+// for cyclic.sh
+
+app.use(express.static(path.join(__dirname, "./frontend/build")));
+
+app.get("*",(req,res)=>{
+    res.sendFile(path.join(__dirname,"./frontend/build/index.html"));
+})
 
 
 //db connection
@@ -1162,6 +1173,9 @@ app.post("/colorchecker/:username", async (req, res) => {
     }
 
 })
+
+
+
 
 
 

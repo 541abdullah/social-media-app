@@ -27,8 +27,8 @@ const Createmodal = ({ trigger, extra }) => {
         thepost: null
     })
 
-    //let url = "http://localhost:3001";
-    let url = "https://social-media-app-backend-final.onrender.com";
+    let url = "http://localhost:3001";
+    //let url = "https://social-media-app-backend-final.onrender.com";
 
     function resizeBase64Img(base64, newWidth, newHeight) {
         return new Promise((resolve, reject) => {

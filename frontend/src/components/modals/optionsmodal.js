@@ -32,8 +32,8 @@ const Optmodal = ({ trigger, contplayer, optionsarray, special, action }) => {
   let curuser = useSelector((state) => { return state.youryr.value });
   let theme = useSelector((state) => { return state.themeyr.value });
 
-  //let url = "http://localhost:3001";
-  let url = "https://social-media-app-backend-final.onrender.com";
+  let url = "http://localhost:3001";
+  //let url = "https://social-media-app-backend-final.onrender.com";
 
   const closemodal = () => {
     trigger(false);

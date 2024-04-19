@@ -26,8 +26,8 @@ const Header = ({ caller, extra }) => {
     let nav = useNavigate();
     let disp = useDispatch();
 
-    //let url = "http://localhost:3001";
-    let url = "https://social-media-app-backend-final.onrender.com";
+    let url = "http://localhost:3001";
+    //let url = "https://social-media-app-backend-final.onrender.com";
 
 
     useEffect(() => {

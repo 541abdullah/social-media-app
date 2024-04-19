@@ -22,8 +22,8 @@ const Storymodal = ({ trigger, changes, current }) => {
     let theme = useSelector((state) => { return state.themeyr.value });
     let curuser = useSelector((state) => { return state.youryr.value });
 
-    //let url = "http://localhost:3001";
-    let url = "https://social-media-app-backend-final.onrender.com";
+    let url = "http://localhost:3001";
+    //let url = "https://social-media-app-backend-final.onrender.com";
 
 
 

@@ -15,8 +15,8 @@ const Login = () => {
     let dis = useDispatch();
     let nav = useNavigate();
 
-    //let url = "http://localhost:3001";
-    let url = "https://social-media-app-backend-final.onrender.com";
+    let url = "http://localhost:3001";
+    //let url = "https://social-media-app-backend-final.onrender.com";
 
 
     let preventer = (e) => {

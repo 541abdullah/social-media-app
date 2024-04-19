@@ -24,8 +24,8 @@ const Newstory = () => {
 
     let collection = JSON.parse(JSON.stringify(collectionmain));
 
-    //let url = "http://localhost:3001";
-    let url = "https://social-media-app-backend-final.onrender.com";
+    let url = "http://localhost:3001";
+    //let url = "https://social-media-app-backend-final.onrender.com";
 
     const current = [];
     if (!onetimeref.current) {
